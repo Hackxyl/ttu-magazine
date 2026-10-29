@@ -1,0 +1,557 @@
+/* =========================================================
+   SPORTS INFORMATION — PAGE 38
+   A4 PRINT MAGAZINE
+========================================================= */
+
+.sports-information-page {
+  position: relative;
+
+  width: 210mm;
+  height: 297mm;
+
+  padding: 15mm 17mm 12mm;
+
+  background: var(--white);
+  color: var(--dark);
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  page-break-after: always;
+  break-after: page;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.sports-information-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 8mm;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.sports-information-header .section-kicker {
+  display: inline-block;
+
+  color: var(--gold);
+
+  font-family: var(--font-body);
+  font-size: 7.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+}
+
+.sports-information-header h1 {
+  margin: 3mm 0 0;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+  font-size: 34pt;
+  font-weight: 700;
+
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.sports-information-header h1 em {
+  color: var(--blue);
+
+  font-style: italic;
+  font-weight: 600;
+}
+
+.sports-information-number {
+  color: var(--navy);
+
+  font-family: var(--font-display);
+  font-size: 28pt;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.sports-information-intro {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 15mm;
+
+  align-items: end;
+
+  padding: 8mm 0 7mm;
+}
+
+.sports-information-label {
+  color: var(--blue);
+
+  font-family: var(--font-body);
+  font-size: 7.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.sports-information-intro h2 {
+  margin: 3mm 0 0;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+  font-size: 25pt;
+  font-weight: 700;
+
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.sports-information-intro h2 em {
+  color: var(--blue);
+
+  font-style: italic;
+  font-weight: 600;
+}
+
+.sports-information-intro > p {
+  margin: 0;
+
+  max-width: 105mm;
+
+  color: var(--gray-600);
+
+  font-family: var(--font-body);
+  font-size: 10pt;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   MAIN INFORMATION
+========================================================= */
+
+.sports-information-main {
+  flex: 1;
+
+  min-height: 0;
+
+  display: grid;
+
+  grid-template-columns: 0.82fr 1.18fr;
+
+  gap: 5mm;
+}
+
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+
+.sports-information-feature {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  padding: 7mm;
+
+  overflow: hidden;
+
+  background: var(--navy);
+
+  color: var(--white);
+}
+
+.sports-information-feature::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2mm;
+
+  background: var(--gold);
+}
+
+.information-feature-number {
+  position: absolute;
+
+  top: 5mm;
+  right: 6mm;
+
+  color: rgba(255, 255, 255, 0.12);
+
+  font-family: var(--font-display);
+  font-size: 48pt;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.information-feature-icon {
+  width: 12mm;
+  height: 12mm;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 8mm;
+
+  color: var(--gold);
+
+  border: 1px solid rgba(242, 181, 68, 0.5);
+}
+
+.sports-information-feature > div:last-child > span {
+  color: var(--gold);
+
+  font-size: 7pt;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.sports-information-feature h3 {
+  margin: 3mm 0 5mm;
+
+  font-family: var(--font-display);
+  font-size: 25pt;
+  font-weight: 700;
+
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.sports-information-feature h3 em {
+  color: var(--gold-light);
+
+  font-style: italic;
+  font-weight: 600;
+}
+
+.sports-information-feature p {
+  margin: 0;
+
+  color: #d9e1ec;
+
+  font-family: var(--font-body);
+  font-size: 8.5pt;
+
+  line-height: 1.55;
+}
+
+/* =========================================================
+   INFORMATION GRID
+========================================================= */
+
+.sports-information-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-rows: repeat(2, 1fr);
+
+  gap: 5mm;
+}
+
+.information-card {
+  position: relative;
+
+  padding: 5mm;
+
+  background: var(--off-white);
+
+  border: 1px solid var(--border);
+
+  overflow: hidden;
+}
+
+.information-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 1.5mm;
+
+  background: var(--gold);
+}
+
+.information-card-icon {
+  width: 9mm;
+  height: 9mm;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 4mm;
+
+  color: var(--blue);
+
+  background: var(--white);
+
+  border: 1px solid rgba(21, 87, 166, 0.25);
+}
+
+.information-card > span {
+  color: var(--gold);
+
+  font-family: var(--font-display);
+  font-size: 10pt;
+  font-weight: 700;
+}
+
+.information-card h3 {
+  margin: 2mm 0 2.5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+  font-size: 14pt;
+  font-weight: 700;
+
+  line-height: 1.05;
+}
+
+.information-card p {
+  margin: 0;
+
+  color: var(--gray-600);
+
+  font-family: var(--font-body);
+  font-size: 8pt;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   CONTACT STRIP
+========================================================= */
+
+.sports-contact-strip {
+  display: grid;
+
+  grid-template-columns: 0.55fr 1.45fr;
+
+  gap: 10mm;
+
+  margin-top: 5mm;
+
+  padding: 5mm 6mm;
+
+  background: var(--navy);
+
+  color: var(--white);
+}
+
+.sports-contact-heading > span {
+  color: var(--gold);
+
+  font-size: 6.8pt;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.sports-contact-heading h3 {
+  margin: 2mm 0 0;
+
+  font-family: var(--font-display);
+  font-size: 17pt;
+
+  line-height: 0.95;
+}
+
+.sports-contact-heading h3 em {
+  color: var(--gold-light);
+
+  font-style: italic;
+}
+
+.sports-contact-details {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 5mm;
+
+  align-items: center;
+}
+
+.contact-detail {
+  display: flex;
+
+  align-items: center;
+
+  gap: 3mm;
+
+  min-width: 0;
+}
+
+.contact-detail > svg {
+  flex-shrink: 0;
+
+  color: var(--gold);
+}
+
+.contact-detail div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1mm;
+
+  min-width: 0;
+}
+
+.contact-detail span {
+  color: var(--gold);
+
+  font-size: 6.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.contact-detail strong {
+  color: var(--white);
+
+  font-size: 7.5pt;
+  font-weight: 500;
+
+  line-height: 1.3;
+}
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.sports-information-note {
+  display: grid;
+
+  grid-template-columns: 0.35fr 1fr;
+
+  gap: 8mm;
+
+  padding: 5mm 0 4mm;
+}
+
+.sports-information-note > span {
+  color: var(--gold);
+
+  font-size: 7pt;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.sports-information-note p {
+  margin: 0;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+  font-size: 11pt;
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.sports-information-footer {
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 8mm;
+
+  padding-top: 5mm;
+
+  color: var(--gray-500);
+
+  font-family: var(--font-body);
+  font-size: 7pt;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+.sports-information-footer > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2mm;
+
+  color: var(--navy);
+}
+
+.sports-information-footer > span:last-child {
+  text-align: right;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+  font-size: 9pt;
+}
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  .sports-information-page {
+    width: 210mm;
+    height: 297mm;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    page-break-after: always;
+    break-after: page;
+
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .sports-information-feature,
+  .sports-contact-strip,
+  .information-card {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .information-card {
+    break-inside: avoid;
+  }
+}

@@ -1,0 +1,846 @@
+/* =========================================================
+   PAGES 04–07 — SPORTS MANAGEMENT PROFILES
+   TTU SPORTS & ATHLETICS 2026
+   A4 PRINT PRODUCTION
+========================================================= */
+
+.management-page {
+  position: relative;
+
+  width: 210mm;
+  height: 297mm;
+  min-height: 297mm;
+
+  padding:
+    15mm
+    17mm
+    13mm;
+
+  box-sizing: border-box;
+
+  color: var(--dark);
+  background: var(--white);
+
+  page-break-after: always;
+  break-after: page;
+
+  overflow: hidden;
+}
+
+.management-page *,
+.management-page *::before,
+.management-page *::after {
+  box-sizing: border-box;
+}
+
+.management-page h1,
+.management-page h2,
+.management-page h3,
+.management-page h4,
+.management-page p,
+.management-page figure {
+  margin: 0;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.management-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 6mm;
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+.management-kicker {
+  display: block;
+
+  color: var(--blue);
+
+  font-size: 7pt;
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.management-header h1 {
+  margin-top: 5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 34pt;
+  font-weight: 700;
+
+  line-height: 0.92;
+
+  letter-spacing: -0.03em;
+}
+
+.management-header > div:first-child > p {
+  margin-top: 2.5mm;
+
+  color: var(--blue);
+
+  font-family: var(--font-display);
+
+  font-size: 14pt;
+  font-style: italic;
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+.management-page-number {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 16mm;
+  height: 16mm;
+
+  background: var(--navy);
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PROFILE INTRO
+========================================================= */
+
+.management-profile-intro {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-top: 9mm;
+}
+
+.management-profile-copy {
+  max-width: 128mm;
+}
+
+.management-label {
+  display: block;
+
+  color: var(--blue);
+
+  font-size: 8pt;
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.management-profile-copy h2 {
+  margin-top: 4mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 27pt;
+  font-weight: 700;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.02em;
+}
+
+.management-profile-copy h2 em {
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+.management-profile-copy p {
+  max-width: 112mm;
+
+  margin-top: 5mm;
+
+  color: var(--gray-700);
+
+  font-size: 10pt;
+
+  line-height: 14.5pt;
+}
+
+.management-profile-index {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  margin-left: 8mm;
+}
+
+.management-profile-index span {
+  color: var(--gray-500);
+
+  font-size: 6.5pt;
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.management-profile-index strong {
+  margin-top: 1mm;
+
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 38pt;
+  font-weight: 700;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.05em;
+}
+
+
+/* =========================================================
+   FEATURE
+========================================================= */
+
+.management-feature {
+  display: grid;
+
+  grid-template-columns:
+    1.25fr
+    0.75fr;
+
+  gap: 0;
+
+  width: 100%;
+
+  height: 78mm;
+
+  margin-top: 8mm;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+FEATURE IMAGE — CONSISTENT FRAME, TOP-ALIGNED
+========================================================= */
+
+.management-feature-image {
+position: relative;
+width: 100%;
+height: 78mm;
+min-width: 0;
+margin: 0;
+overflow: hidden;
+background: var(--gray-100);
+}
+
+.management-feature-image img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center top;
+transform: none !important;
+}
+
+/* Keep the image fit consistent in print */
+@media print {
+.management-feature-image img {
+object-fit: cover !important;
+object-position: center top !important;
+transform: none !important;
+}
+}
+
+
+
+.management-feature-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(7, 26, 53, 0.88) 0%,
+      rgba(7, 26, 53, 0.28) 45%,
+      transparent 72%
+    );
+}
+
+.management-feature-number {
+  position: absolute;
+
+  top: 5mm;
+  left: 5mm;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 13mm;
+  height: 13mm;
+
+  background: var(--gold);
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+.management-feature-image figcaption {
+  position: absolute;
+
+  left: 5mm;
+  right: 5mm;
+  bottom: 4mm;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 3mm;
+
+  border-top:
+    0.3mm solid rgba(255, 255, 255, 0.45);
+}
+
+.management-feature-image figcaption span {
+  color: var(--white);
+
+  font-size: 6.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.management-feature-image figcaption strong {
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 9pt;
+}
+
+
+/* =========================================================
+   FEATURE SIDE
+========================================================= */
+
+.management-feature-side {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    8mm
+    8mm;
+
+  background: var(--navy);
+
+  color: var(--white);
+}
+
+.management-feature-side .management-label {
+  color: var(--gold-light);
+}
+
+.management-feature-side h3 {
+  margin-top: 3mm;
+
+  color: var(--white);
+
+  font-family: var(--font-display);
+
+  font-size: 19pt;
+  font-weight: 700;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.02em;
+}
+
+.management-gold-line {
+  width: 18mm;
+  height: 0.9mm;
+
+  margin-top: 5mm;
+
+  background: var(--gold);
+}
+
+.management-feature-side > p {
+  margin-top: 5mm;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 8.5pt;
+
+  line-height: 12.5pt;
+}
+
+.management-feature-note {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.5mm;
+
+  margin-top: 6mm;
+
+  padding-top: 4mm;
+
+  border-top:
+    0.35mm solid rgba(255, 255, 255, 0.2);
+}
+
+.management-feature-note span {
+  color: var(--gold);
+
+  font-size: 6pt;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.management-feature-note strong {
+  color: var(--white);
+
+  font-size: 7pt;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.management-message {
+  display: grid;
+
+  grid-template-columns:
+    0.75fr
+    1.25fr;
+
+  gap: 8mm;
+
+  align-items: center;
+
+  margin-top: 8mm;
+
+  padding:
+    6mm
+    7mm;
+
+  background: var(--gray-50);
+
+  border-top:
+    1.2mm solid var(--gold);
+
+  border-bottom:
+    0.35mm solid var(--border);
+}
+
+.management-message-title {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.management-message-title > span {
+  color: var(--blue);
+
+  font-size: 7pt;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.management-message-title h3 {
+  margin-top: 3mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 18pt;
+  font-weight: 700;
+
+  line-height: 1.02;
+}
+
+.management-message-title h3 em {
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+.management-message-line {
+  width: 13mm;
+  height: 0.8mm;
+
+  margin-top: 4mm;
+
+  background: var(--gold);
+}
+
+.management-message-content {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  min-height: 29mm;
+
+  padding-left: 9mm;
+
+  border-left:
+    0.35mm solid var(--border);
+}
+
+.management-quote {
+  position: absolute;
+
+  top: -4mm;
+  left: 0;
+
+  color: var(--gold);
+
+  font-family: Georgia, serif;
+
+  font-size: 42pt;
+
+  line-height: 0.7;
+}
+
+.management-message-content p {
+  color: var(--gray-700);
+
+  font-family: var(--font-display);
+
+  font-size: 9.3pt;
+
+  line-height: 14pt;
+}
+
+
+/* =========================================================
+   FOCUS AREAS
+========================================================= */
+
+.management-focus {
+  margin-top: 8mm;
+}
+
+.management-focus-header {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding-bottom: 2.5mm;
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+.management-focus-header > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1mm;
+}
+
+.management-focus-header span {
+  color: var(--gray-500);
+
+  font-size: 6.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.management-focus-header h3 {
+  color: var(--navy);
+
+  font-size: 8pt;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.management-focus-header > strong {
+  color: var(--blue);
+
+  font-size: 6.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   FOCUS GRID
+========================================================= */
+
+.management-focus-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 5mm;
+
+  margin-top: 4mm;
+}
+
+.management-focus-card {
+  display: grid;
+
+  grid-template-columns: 10mm 1fr;
+
+  gap: 4mm;
+
+  min-height: 25mm;
+
+  padding: 4.5mm;
+
+  background: var(--gray-50);
+
+  border:
+    0.4mm solid var(--border);
+}
+
+.management-focus-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 10mm;
+  height: 10mm;
+
+  background: var(--navy);
+
+  color: var(--gold);
+}
+
+.management-focus-icon svg {
+  width: 4.5mm;
+  height: 4.5mm;
+}
+
+.management-focus-card > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.2mm;
+}
+
+.management-focus-card > div:last-child > span {
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 8pt;
+  font-weight: 700;
+}
+
+.management-focus-card h4 {
+  color: var(--navy);
+
+  font-size: 7.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.07em;
+
+  text-transform: uppercase;
+}
+
+.management-focus-card p {
+  color: var(--gray-600);
+
+  font-size: 7.2pt;
+
+  line-height: 10pt;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.management-footer {
+  position: absolute;
+
+  left: 17mm;
+  right: 17mm;
+  bottom: 7mm;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 3mm;
+
+  border-top:
+    0.4mm solid var(--border);
+}
+
+.management-footer > div:first-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1mm;
+}
+
+.management-footer > div:first-child span {
+  color: var(--gray-500);
+
+  font-size: 7pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.management-footer > div:first-child strong {
+  color: var(--navy);
+
+  font-size: 8pt;
+
+  letter-spacing: 0.08em;
+}
+
+.management-footer-link {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2mm;
+
+  color: var(--blue);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+}
+
+.management-footer-link svg {
+  width: 4mm;
+  height: 4mm;
+
+  color: var(--gold);
+}
+
+.management-footer-page {
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 9pt;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  .management-page {
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    page-break-after: always;
+    break-after: page;
+
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+
+/* =========================================================
+   SCREEN PREVIEW
+========================================================= */
+
+@media screen {
+  .management-page {
+    margin: 10mm auto;
+
+    box-shadow:
+      0 10px 40px rgba(0, 0, 0, 0.12);
+  }
+}

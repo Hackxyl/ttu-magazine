@@ -1,0 +1,344 @@
+.other-sports-page {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  padding: 15mm 17mm 12mm;
+  background: var(--white);
+  color: var(--dark);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  page-break-after: always;
+  break-after: page;
+}
+
+.other-sports-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 8mm;
+  border-bottom: 1px solid var(--border);
+}
+
+.other-sports-header h1 {
+  margin: 3mm 0 0;
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-size: 34pt;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.other-sports-header h1 em {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.section-kicker {
+  display: inline-block;
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 7.5pt;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.other-sports-number {
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-size: 28pt;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.other-sports-intro {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 15mm;
+  align-items: end;
+  padding: 8mm 0 7mm;
+}
+
+.other-sports-label {
+  color: var(--blue);
+  font-size: 7.5pt;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.other-sports-intro h2 {
+  margin: 3mm 0 0;
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-size: 25pt;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.other-sports-intro h2 em {
+  color: var(--blue);
+}
+
+.other-sports-intro p {
+  margin: 0;
+  color: var(--gray-600);
+  font-size: 10pt;
+  line-height: 1.55;
+  max-width: 105mm;
+}
+
+.karate-feature {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 8mm;
+  background: var(--navy);
+  padding: 6mm;
+}
+
+.karate-image {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--navy-light);
+}
+
+.karate-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.karate-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(7, 26, 53, 0.75),
+    rgba(7, 26, 53, 0.05) 55%
+  );
+  pointer-events: none;
+}
+
+.karate-image-number {
+  position: absolute;
+  left: 5mm;
+  bottom: 5mm;
+  z-index: 2;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 22pt;
+}
+
+.karate-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5mm 3mm 5mm 1mm;
+  color: var(--white);
+}
+
+.karate-heading span {
+  color: var(--gold);
+  font-size: 7pt;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.karate-heading h3 {
+  margin: 3mm 0 0;
+  font-family: var(--font-display);
+  font-size: 29pt;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.karate-heading h3 em {
+  color: var(--gold-light);
+  font-size: 19pt;
+  font-weight: 600;
+}
+
+.karate-description {
+  margin: 8mm 0;
+  color: #d9e1ec;
+  font-size: 9.5pt;
+  line-height: 1.6;
+}
+
+.karate-principles {
+  display: grid;
+  gap: 3mm;
+  padding: 4mm 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.karate-principles div {
+  display: flex;
+  align-items: center;
+  gap: 3mm;
+}
+
+.karate-principles svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.karate-principles span {
+  font-size: 7.5pt;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.karate-note {
+  display: grid;
+  grid-template-columns: 10mm 1fr;
+  gap: 3mm;
+  align-items: start;
+}
+
+.karate-note span {
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 16pt;
+}
+
+.karate-note p {
+  margin: 0;
+  color: #d9e1ec;
+  font-size: 8.5pt;
+  line-height: 1.45;
+}
+
+.other-sports-footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8mm;
+  padding-top: 5mm;
+  color: var(--gray-500);
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.other-sports-footer div {
+  display: flex;
+  align-items: center;
+  gap: 2mm;
+  color: var(--navy);
+}
+
+.other-sports-footer span:last-child {
+  text-align: right;
+  color: var(--navy);
+}
+
+/* Print */
+@media print {
+  .other-sports-page {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .karate-feature {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .karate-image::after {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* =========================================================
+   CREDIT PERSON IMAGE
+========================================================= */
+
+.credit-person {
+  position: absolute;
+  top: 5mm;
+  right: 5mm;
+
+  width: 15mm;
+  height: 15mm;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  background: #d0d5dd;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(7, 26, 53, 0.12);
+}
+
+.credit-person img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   TWO-PERSON CONTRIBUTOR IMAGE
+========================================================= */
+
+.credit-person-duo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+}
+
+.credit-person-duo img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.credit-person-duo img + img {
+  border-left: 1px solid #ffffff;
+}
+
+/* =========================================================
+   CREDIT CARD ADJUSTMENTS
+========================================================= */
+
+.credit-card {
+  min-height: 37mm;
+  padding: 5mm;
+  padding-right: 23mm;
+  background: #f5f7fa;
+  border: 1px solid #d0d5dd;
+  position: relative;
+}
+
+.credit-card .credit-icon {
+  margin-bottom: 3mm;
+}
+
+.credit-card h3 {
+  margin: 0 0 1.5mm;
+  color: #071a35;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: 800;
+}
+
+.credit-card p {
+  margin: 0;
+  color: #475467;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 8pt;
+  line-height: 1.4;
+  font-weight: 600;
+}

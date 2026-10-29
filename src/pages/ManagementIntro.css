@@ -1,0 +1,457 @@
+/* =========================================================
+   PAGE 03 — SPORTS MANAGEMENT INTRODUCTION
+========================================================= */
+
+.management-intro-page {
+  position: relative;
+
+  width: 210mm;
+  height: 297mm;
+  min-height: 297mm;
+
+  padding:
+    15mm
+    17mm
+    13mm;
+
+  box-sizing: border-box;
+
+  color: var(--dark);
+  background: var(--white);
+
+  page-break-after: always;
+  break-after: page;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.management-intro-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 6mm;
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+.management-intro-header h1 {
+  margin-top: 5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 38pt;
+  font-weight: 700;
+
+  line-height: 0.92;
+
+  letter-spacing: -0.03em;
+}
+
+.management-intro-header h1 em {
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+.management-intro-number {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 16mm;
+  height: 16mm;
+
+  background: var(--navy);
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.management-intro-hero {
+  display: grid;
+
+  grid-template-columns:
+    1.25fr 0.75fr;
+
+  gap: 13mm;
+
+  margin-top: 11mm;
+}
+
+.management-intro-hero-copy {
+  padding-right: 3mm;
+}
+
+.management-intro-label {
+  display: block;
+
+  color: var(--blue);
+
+  font-size: 8pt;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.management-intro-hero-copy h2 {
+  margin-top: 4mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 27pt;
+  font-weight: 700;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.02em;
+}
+
+.management-intro-hero-copy h2 em {
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+.management-intro-hero-copy p {
+  max-width: 112mm;
+
+  margin-top: 6mm;
+
+  color: var(--gray-700);
+
+  font-size: 10.5pt;
+
+  line-height: 15.5pt;
+}
+
+.management-intro-hero-copy p + p {
+  margin-top: 4mm;
+}
+
+
+/* =========================================================
+   SIDE STATEMENTS
+========================================================= */
+
+.management-intro-side {
+  display: flex;
+
+  flex-direction: column;
+
+  border-top:
+    1.2mm solid var(--gold);
+}
+
+.management-intro-stat {
+  display: grid;
+
+  grid-template-columns: 11mm 1fr;
+
+  column-gap: 4mm;
+
+  padding:
+    5mm
+    0;
+
+  border-bottom:
+    0.35mm solid var(--border);
+}
+
+.management-intro-stat strong {
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+}
+
+.management-intro-stat span {
+  color: var(--navy);
+
+  font-size: 8pt;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.management-intro-stat p {
+  grid-column: 2;
+
+  margin-top: 2mm;
+
+  color: var(--gray-600);
+
+  font-size: 8.5pt;
+
+  line-height: 12pt;
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.management-intro-quote {
+  display: grid;
+
+  grid-template-columns: 18mm 1fr;
+
+  gap: 5mm;
+
+  align-items: center;
+
+  margin-top: 11mm;
+
+  padding:
+    7mm
+    8mm;
+
+  background: var(--navy);
+
+  color: var(--white);
+}
+
+.management-intro-quote-mark {
+  color: var(--gold);
+
+  font-family: Georgia, serif;
+
+  font-size: 52pt;
+
+  line-height: 0.7;
+}
+
+.management-intro-quote p {
+  max-width: 125mm;
+
+  color: var(--white);
+
+  font-family: var(--font-display);
+
+  font-size: 14pt;
+
+  line-height: 19pt;
+}
+
+.management-intro-quote span {
+  display: block;
+
+  margin-top: 3mm;
+
+  color: var(--gold-light);
+
+  font-size: 7pt;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   ROLE BLOCKS
+========================================================= */
+
+.management-intro-roles {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 5mm;
+
+  margin-top: 10mm;
+}
+
+.management-intro-role {
+  display: flex;
+
+  gap: 4mm;
+
+  min-height: 25mm;
+
+  padding: 5mm;
+
+  border:
+    0.4mm solid var(--border);
+
+  background: var(--gray-50);
+}
+
+.management-intro-role-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 10mm;
+  height: 10mm;
+
+  background: var(--navy);
+
+  color: var(--gold);
+}
+
+.management-intro-role div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.5mm;
+}
+
+.management-intro-role strong {
+  color: var(--navy);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.management-intro-role span {
+  color: var(--gray-600);
+
+  font-size: 7.5pt;
+
+  line-height: 10pt;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.management-intro-footer {
+  position: absolute;
+
+  left: 17mm;
+  right: 17mm;
+  bottom: 7mm;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 3mm;
+
+  border-top:
+    0.4mm solid var(--border);
+}
+
+.management-intro-footer > div:first-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1mm;
+}
+
+.management-intro-footer span {
+  color: var(--gray-500);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.management-intro-footer strong {
+  color: var(--navy);
+
+  font-size: 8.5pt;
+
+  letter-spacing: 0.08em;
+}
+
+.management-intro-footer-link {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2mm;
+
+  color: var(--blue);
+
+  font-size: 8pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+}
+
+.management-intro-footer-page-number {
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 9pt;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+  .management-intro-page {
+    width: 210mm;
+    height: 297mm;
+
+    min-height: 297mm;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    page-break-after: always;
+    break-after: page;
+
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+
+/* =========================================================
+   SCREEN PREVIEW
+========================================================= */
+
+@media screen {
+  .management-intro-page {
+    margin: 10mm auto;
+
+    box-shadow:
+      0 10px 40px rgba(0, 0, 0, 0.12);
+  }
+}

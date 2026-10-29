@@ -1,0 +1,499 @@
+/* =========================================================
+   OUR SPORTING STORY
+   PAGE 27
+========================================================= */
+
+.sporting-story-page {
+  width: 210mm;
+  height: 297mm;
+  min-height: 297mm;
+
+  padding: 15mm 17mm 12mm;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--white);
+
+  overflow: hidden;
+}
+
+/* ---------------------------------------------------------
+   HEADER
+--------------------------------------------------------- */
+
+.sporting-story-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 5mm;
+
+  border-bottom: 0.4mm solid var(--border);
+}
+
+.sporting-story-header h2 {
+  margin-top: 5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 34pt;
+  line-height: 0.96;
+}
+
+.sporting-story-header h2 em {
+  color: var(--blue);
+  font-style: italic;
+}
+
+.sporting-story-page-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16mm;
+  height: 16mm;
+
+  background: var(--navy);
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   HERO
+--------------------------------------------------------- */
+
+.sporting-story-hero {
+  display: grid;
+
+  grid-template-columns: 1fr auto;
+
+  align-items: center;
+
+  gap: 8mm;
+
+  margin-top: 6mm;
+
+  padding: 6mm;
+
+  background: var(--gray-50);
+
+  border-left: 1mm solid var(--gold);
+}
+
+.sporting-story-hero-copy > span {
+  display: block;
+
+  color: var(--blue);
+
+  font-size: 7pt;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.sporting-story-hero-copy h3 {
+  margin-top: 2mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 22pt;
+  line-height: 1;
+}
+
+.sporting-story-hero-copy h3 em {
+  color: var(--blue);
+  font-style: italic;
+}
+
+.sporting-story-hero-copy p {
+  max-width: 128mm;
+
+  margin-top: 3mm;
+
+  color: var(--gray-600);
+
+  font-size: 8.5pt;
+  line-height: 12pt;
+}
+
+.sporting-story-hero-mark {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 24mm;
+  height: 24mm;
+
+  background: var(--navy);
+
+  color: var(--gold-light);
+}
+
+.sporting-story-hero-mark span {
+  font-size: 7pt;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.sporting-story-hero-mark strong {
+  margin-top: 1mm;
+
+  font-family: var(--font-display);
+
+  font-size: 19pt;
+}
+
+/* ---------------------------------------------------------
+   FEATURE STORY
+--------------------------------------------------------- */
+
+.sporting-story-feature {
+  display: grid;
+
+  grid-template-columns: 0.95fr 1.05fr;
+
+  gap: 7mm;
+
+  margin-top: 6mm;
+
+  min-height: 69mm;
+}
+
+.sporting-story-feature-image {
+  position: relative;
+
+  min-height: 69mm;
+
+  overflow: hidden;
+
+  background: var(--navy);
+}
+
+.sporting-story-feature-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.sporting-story-image-placeholder {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 3mm;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--navy),
+      var(--navy-light)
+    );
+
+  color: var(--gold);
+}
+
+.sporting-story-image-placeholder span {
+  color: var(--gold-light);
+
+  font-size: 6.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.sporting-story-feature-image img + .sporting-story-image-placeholder {
+  display: none;
+}
+
+.sporting-story-image-number {
+  position: absolute;
+
+  top: 3mm;
+  left: 3mm;
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 12pt;
+  font-weight: 700;
+}
+
+.sporting-story-feature-copy {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.sporting-story-feature-copy > span {
+  color: var(--blue);
+
+  font-size: 7pt;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.sporting-story-feature-copy h3 {
+  margin-top: 2mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 21pt;
+  line-height: 1.02;
+}
+
+.sporting-story-feature-copy p {
+  margin-top: 3mm;
+
+  color: var(--gray-600);
+
+  font-size: 8.5pt;
+  line-height: 12pt;
+}
+
+/* ---------------------------------------------------------
+   JOURNEY POINTS
+--------------------------------------------------------- */
+
+.sporting-story-process {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 3mm;
+
+  margin-top: 6mm;
+
+  flex: 1;
+
+  min-height: 0;
+}
+
+.sporting-story-point {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 0;
+
+  padding: 4mm;
+
+  background: var(--white);
+
+  border: 0.4mm solid var(--border);
+
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.sporting-story-point-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sporting-story-point-top > span {
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 12pt;
+  font-weight: 700;
+}
+
+.sporting-story-point-top > div {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 9mm;
+  height: 9mm;
+
+  background: var(--gray-100);
+
+  color: var(--blue);
+}
+
+.sporting-story-point h4 {
+  margin-top: 6mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 14pt;
+  line-height: 1;
+}
+
+.sporting-story-point p {
+  margin-top: 2.5mm;
+
+  color: var(--gray-600);
+
+  font-size: 7.5pt;
+  line-height: 10.5pt;
+}
+
+/* ---------------------------------------------------------
+   CLOSING
+--------------------------------------------------------- */
+
+.sporting-story-closing {
+  display: grid;
+
+  grid-template-columns: 1fr auto;
+
+  align-items: center;
+
+  gap: 5mm;
+
+  margin-top: 5mm;
+
+  padding: 5mm 6mm;
+
+  background: var(--navy);
+
+  color: var(--white);
+}
+
+.sporting-story-closing > div:first-child > span {
+  display: block;
+
+  margin-bottom: 1.5mm;
+
+  color: var(--gold-light);
+
+  font-size: 6.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.sporting-story-closing strong {
+  color: var(--white);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+  line-height: 1.05;
+}
+
+.sporting-story-closing strong span {
+  color: var(--white);
+}
+
+.sporting-story-closing strong em {
+  color: var(--gold-light);
+  font-style: italic;
+}
+
+.sporting-story-closing-mark {
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 24pt;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   FOOTER
+--------------------------------------------------------- */
+
+.sporting-story-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 3mm;
+
+  padding-top: 3mm;
+
+  border-top: 0.4mm solid var(--border);
+
+  color: var(--gray-500);
+
+  font-size: 7.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+}
+
+.sporting-story-footer div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2mm;
+}
+
+.sporting-story-footer > span:last-child {
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 11pt;
+}
+
+/* ---------------------------------------------------------
+   PRINT
+--------------------------------------------------------- */
+
+@media print {
+  .sporting-story-page {
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+
+    overflow: hidden;
+
+    break-after: page;
+    page-break-after: always;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .sporting-story-header,
+  .sporting-story-hero,
+  .sporting-story-feature,
+  .sporting-story-process,
+  .sporting-story-closing,
+  .sporting-story-footer {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .sporting-story-point,
+  .sporting-story-feature-image {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

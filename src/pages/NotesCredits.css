@@ -1,0 +1,621 @@
+
+/* =========================================================
+   PAGE 39 — NOTES & CREDITS
+========================================================= */
+
+.notes-credits-page {
+  position: relative;
+
+  width: 210mm;
+  height: 297mm;
+  min-height: 297mm;
+
+  padding: 15mm 16mm 11mm;
+
+  background: #ffffff;
+  color: #111827;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.notes-credits-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 8mm;
+
+  border-bottom: 1px solid #d0d5dd;
+}
+
+.notes-credits-header .section-kicker {
+  display: block;
+
+  margin-bottom: 3mm;
+
+  color: #667085;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 7.5pt;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.notes-credits-header h1 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 34pt;
+  line-height: 0.91;
+  font-weight: 700;
+
+  letter-spacing: -0.035em;
+}
+
+.notes-credits-header h1 em {
+  color: #1557a6;
+  font-style: italic;
+}
+
+.notes-credits-number {
+  width: 16mm;
+  height: 16mm;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #071a35;
+  color: #f2b544;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.notes-credits-intro {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+
+  gap: 14mm;
+
+  padding: 8mm 0 7mm;
+}
+
+.notes-credits-label {
+  display: block;
+
+  margin-bottom: 2.5mm;
+
+  color: #1557a6;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 7.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.notes-credits-intro h2 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22pt;
+  line-height: 1;
+
+  letter-spacing: -0.025em;
+}
+
+.notes-credits-intro h2 em {
+  color: #1557a6;
+  font-style: italic;
+}
+
+.notes-credits-intro > p {
+  align-self: end;
+
+  margin: 0;
+
+  max-width: 92mm;
+
+  color: #475467;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 9.5pt;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   DETAILS AREA
+========================================================= */
+
+.notes-credits-details {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 5mm;
+}
+
+/* =========================================================
+   MAIN PUBLICATION CARD
+========================================================= */
+
+.publication-card-main {
+  position: relative;
+
+  min-height: 76mm;
+
+  padding: 7mm;
+
+  background: #071a35;
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+.publication-card-main::after {
+  content: "";
+
+  position: absolute;
+
+  width: 48mm;
+  height: 48mm;
+
+  right: -20mm;
+  bottom: -22mm;
+
+  border: 1px solid rgba(242, 181, 68, 0.35);
+
+  border-radius: 50%;
+}
+
+.publication-card-top {
+  display: flex;
+  align-items: center;
+
+  gap: 2.5mm;
+
+  color: #f2b544;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 7pt;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.publication-card-main h3 {
+  position: relative;
+  z-index: 1;
+
+  margin: 13mm 0 3mm;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 25pt;
+  line-height: 0.95;
+
+  letter-spacing: -0.03em;
+}
+
+.publication-card-main h3 em {
+  color: #ffd875;
+  font-style: italic;
+}
+
+.publication-card-main > p {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  color: #d8e1ed;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 8.5pt;
+}
+
+.publication-meta {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 6mm;
+
+  margin-top: 12mm;
+
+  padding-top: 4mm;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.publication-meta span,
+.record-item span {
+  display: block;
+
+  margin-bottom: 1.5mm;
+
+  color: #98a2b3;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 6.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.publication-meta strong {
+  color: #ffffff;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 8pt;
+  font-weight: 600;
+}
+
+/* =========================================================
+   CREDIT GRID
+========================================================= */
+
+.credits-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 5mm;
+}
+
+/* =========================================================
+   CREDIT CARD
+========================================================= */
+
+.credit-card {
+  position: relative;
+
+  min-height: 35.5mm;
+
+  padding: 5mm;
+  padding-right: 23mm;
+
+  background: #f5f7fa;
+
+  border: 1px solid #d0d5dd;
+}
+
+.credit-card > .credit-number {
+  position: absolute;
+
+  top: 5mm;
+  right: 5mm;
+
+  color: #98a2b3;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 7pt;
+  font-weight: 800;
+}
+
+/* =========================================================
+   CREDIT PERSON IMAGE
+========================================================= */
+
+.credit-person {
+  position: absolute;
+
+  top: 5mm;
+  right: 5mm;
+
+  width: 15mm;
+  height: 15mm;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background: #d0d5dd;
+
+  border: 2px solid #ffffff;
+
+  box-shadow: 0 2px 8px rgba(7, 26, 53, 0.12);
+}
+
+.credit-person img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   TWO PERSONS
+========================================================= */
+
+.credit-person-duo {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  background: #ffffff;
+}
+
+.credit-person-duo img {
+  width: 50%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.credit-person-duo img + img {
+  border-left: 1px solid #ffffff;
+}
+
+/* =========================================================
+   CREDIT ICON
+========================================================= */
+
+.credit-icon {
+  width: 9mm;
+  height: 9mm;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 3mm;
+
+  background: #ffffff;
+
+  color: #1557a6;
+
+  border: 1px solid #d0d5dd;
+}
+
+.credit-card h3 {
+  margin: 0 0 1.5mm;
+
+  color: #071a35;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: 800;
+}
+
+.credit-card p {
+  margin: 0;
+
+  color: #475467;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 8pt;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+/* =========================================================
+   PUBLICATION RECORD
+========================================================= */
+
+.publication-record {
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: 12mm;
+
+  margin-top: 8mm;
+
+  padding: 7mm 0;
+
+  border-top: 1px solid #d0d5dd;
+  border-bottom: 1px solid #d0d5dd;
+}
+
+.record-heading > span {
+  display: block;
+
+  margin-bottom: 2mm;
+
+  color: #1557a6;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 7pt;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.record-heading h3 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 17pt;
+  line-height: 1;
+}
+
+.record-heading h3 em {
+  color: #1557a6;
+  font-style: italic;
+}
+
+.record-items {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8mm;
+
+  align-items: center;
+}
+
+.record-item {
+  display: flex;
+  align-items: center;
+
+  gap: 3mm;
+}
+
+.record-item svg {
+  flex-shrink: 0;
+
+  color: #1557a6;
+}
+
+.record-item span {
+  display: block;
+}
+
+.record-item strong {
+  display: block;
+
+  color: #344054;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+}
+
+/* =========================================================
+   EDITORIAL NOTE
+========================================================= */
+
+.editorial-note {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 5mm;
+
+  margin-top: auto;
+
+  padding: 7mm 8mm;
+
+  background: #f9fafb;
+
+  border-left: 3px solid #f2b544;
+}
+
+.editorial-note-mark {
+  color: #f2b544;
+
+  font-family: Georgia, serif;
+  font-size: 32pt;
+  line-height: 0.75;
+}
+
+.editorial-note span {
+  display: block;
+
+  margin-bottom: 2mm;
+
+  color: #1557a6;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 7pt;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.editorial-note p {
+  max-width: 125mm;
+
+  margin: 0;
+
+  color: #475467;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 11pt;
+  line-height: 1.45;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.notes-credits-footer {
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 5mm;
+
+  margin-top: 6mm;
+
+  padding-top: 4mm;
+
+  border-top: 1px solid #d0d5dd;
+
+  color: #667085;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 6.5pt;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.notes-credits-footer div {
+  display: flex;
+  align-items: center;
+
+  gap: 1.5mm;
+
+  color: #1557a6;
+}
+
+.notes-credits-footer > span:last-child {
+  justify-self: end;
+
+  color: #071a35;
+}
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  .notes-credits-page {
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+
+    overflow: hidden;
+
+    break-after: page;
+    page-break-after: always;
+
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

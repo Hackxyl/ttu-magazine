@@ -1,0 +1,7016 @@
+/* =========================================================
+   TAITA TAVETA UNIVERSITY
+   SPORTS & ATHLETICS MAGAZINE — 2026
+
+   PROFESSIONAL PRINT-FIRST DESIGN SYSTEM
+
+   FORMAT
+   A4 PORTRAIT
+   210mm × 297mm
+
+   TYPE
+   DM Sans
+   Playfair Display
+
+   PURPOSE
+   FINAL HARD-COPY UNIVERSITY SPORTS MAGAZINE
+========================================================= */
+
+
+/* =========================================================
+   01. DESIGN TOKENS
+========================================================= */
+
+@import url(
+  "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap"
+);
+
+:root {
+
+  /* -----------------------------------------
+     BRAND
+  ----------------------------------------- */
+
+  --navy: #071a35;
+  --navy-light: #0d2a52;
+  --blue: #1557a6;
+
+  --gold: #f2b544;
+  --gold-light: #ffd875;
+
+  /* -----------------------------------------
+     NEUTRALS
+  ----------------------------------------- */
+
+  --white: #ffffff;
+  --off-white: #f5f7fa;
+
+  --gray-50: #f9fafb;
+  --gray-100: #f2f4f7;
+  --gray-200: #e4e7ec;
+  --gray-300: #d0d5dd;
+  --gray-400: #98a2b3;
+  --gray-500: #667085;
+  --gray-600: #475467;
+  --gray-700: #344054;
+  --gray-800: #1d2939;
+
+  --dark: #111827;
+
+  /* -----------------------------------------
+     TYPOGRAPHY
+  ----------------------------------------- */
+
+  --font-body:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  --font-display:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  --text-caption: 8pt;
+
+  --text-small: 9pt;
+
+  --text-body: 10.5pt;
+  --text-body-leading: 13.5pt;
+
+  --text-lead: 14pt;
+  --text-lead-leading: 19pt;
+
+  --text-subheading: 15pt;
+  --text-subheading-leading: 18pt;
+
+  --text-title: 24pt;
+
+  --text-section-title: 30pt;
+
+  --text-major-title: 38pt;
+
+  --text-cover-title: 62pt;
+
+  /* -----------------------------------------
+     PAGE
+  ----------------------------------------- */
+
+  --page-width: 210mm;
+  --page-height: 297mm;
+
+  --page-margin-x: 17mm;
+  --page-margin-top: 15mm;
+  --page-margin-bottom: 15mm;
+
+  /* -----------------------------------------
+     SPACING
+  ----------------------------------------- */
+
+  --space-xs: 2mm;
+  --space-sm: 4mm;
+  --space-md: 6mm;
+  --space-lg: 9mm;
+  --space-xl: 12mm;
+  --space-xxl: 16mm;
+
+  /* -----------------------------------------
+     BORDERS
+  ----------------------------------------- */
+
+  --border: #e4e7ec;
+
+  --border-dark:
+    rgba(255, 255, 255, 0.22);
+
+  /* -----------------------------------------
+     SHADOW
+  ----------------------------------------- */
+
+  --page-shadow:
+    0 20px 60px rgba(7, 26, 53, 0.18);
+}
+
+
+/* =========================================================
+   02. RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+html {
+  margin: 0;
+  padding: 0;
+
+  background: #d9dde3;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background: #d9dde3;
+
+  color: var(--dark);
+
+  font-family: var(--font-body);
+
+  font-size: var(--text-body);
+
+  line-height:
+    var(--text-body-leading);
+
+  -webkit-font-smoothing:
+    antialiased;
+
+  text-rendering:
+    optimizeLegibility;
+}
+
+
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+
+img {
+  display: block;
+
+  max-width: 100%;
+
+  border: 0;
+}
+
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+
+p {
+  font-family: var(--font-body);
+
+  font-size: var(--text-body);
+
+  line-height:
+    var(--text-body-leading);
+}
+
+
+strong {
+  font-weight: 700;
+}
+
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   03. MAGAZINE FOUNDATION
+========================================================= */
+
+.magazine {
+
+  width: 100%;
+
+  margin: 0;
+
+  padding: 1px 0;
+}
+
+
+.magazine-page {
+
+  position: relative;
+
+  width: var(--page-width);
+
+  height: var(--page-height);
+
+  min-width: var(--page-width);
+
+  max-width: var(--page-width);
+
+  min-height: var(--page-height);
+
+  max-height: var(--page-height);
+
+  margin: 30px auto;
+
+  overflow: hidden;
+
+  background: var(--white);
+
+  box-shadow:
+    var(--page-shadow);
+
+  box-sizing: border-box;
+
+  break-after: page;
+
+  page-break-after: always;
+}
+
+
+/* =========================================================
+   04. GLOBAL EDITORIAL UTILITIES
+========================================================= */
+
+.section-kicker {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 3mm;
+
+  color: var(--blue);
+
+  font-family: var(--font-body);
+
+  font-size: 9.5pt;
+
+  font-weight: 800;
+
+  line-height: 11pt;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+}
+
+
+.section-kicker::before {
+
+  content: "";
+
+  width: 10mm;
+
+  height: 0.7mm;
+
+  flex-shrink: 0;
+
+  background: var(--gold);
+}
+
+
+.magazine-major-title {
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: var(--text-major-title);
+
+  font-weight: 700;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.025em;
+}
+
+
+.magazine-major-title em {
+
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+
+.magazine-section-title {
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: var(--text-section-title);
+
+  font-weight: 700;
+
+  line-height: 1.02;
+}
+
+
+.magazine-title {
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: var(--text-title);
+
+  font-weight: 700;
+
+  line-height: 1.08;
+}
+
+
+.magazine-subheading {
+
+  color: var(--navy);
+
+  font-family: var(--font-body);
+
+  font-size: var(--text-subheading);
+
+  font-weight: 700;
+
+  line-height:
+    var(--text-subheading-leading);
+}
+
+
+.magazine-caption {
+
+  color: var(--gray-500);
+
+  font-family: var(--font-body);
+
+  font-size: var(--text-caption);
+
+  line-height: 10pt;
+
+  font-weight: 500;
+}
+
+
+.magazine-meta {
+
+  color: var(--gray-500);
+
+  font-family: var(--font-body);
+
+  font-size: var(--text-caption);
+
+  line-height: 10pt;
+
+  font-weight: 700;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   05. PAGE HEADER SYSTEM
+========================================================= */
+
+.page-header {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding-bottom: 5mm;
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+
+.page-number {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 14mm;
+
+  height: 14mm;
+
+  background: var(--navy);
+
+  color: var(--white);
+
+  font-family: var(--font-display);
+
+  font-size: 14pt;
+
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+.gold-line {
+
+  width: 28mm;
+
+  height: 1.3mm;
+
+  background: var(--gold);
+}
+
+
+/* =========================================================
+   06. PAGE FOOTER FOUNDATION
+========================================================= */
+
+.magazine-footer {
+
+  position: absolute;
+
+  left: var(--page-margin-x);
+
+  right: var(--page-margin-x);
+
+  bottom: 7mm;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 3mm;
+
+  border-top:
+    0.4mm solid var(--border);
+
+  color: var(--gray-500);
+
+  font-family: var(--font-body);
+
+  font-size: 8pt;
+
+  font-weight: 700;
+
+  line-height: 10pt;
+
+  letter-spacing: 0.06em;
+}
+
+
+/* =========================================================
+   07. PAGE 01 — COVER
+========================================================= */
+
+.cover-page {
+
+  position: relative;
+
+  width: 210mm;
+  height: 297mm;
+
+  min-width: 210mm;
+  max-width: 210mm;
+
+  min-height: 297mm;
+  max-height: 297mm;
+
+  margin: 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  background: var(--navy);
+
+  color: var(--white);
+}
+
+
+.cover-image {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  object-fit: cover;
+
+  object-position: center center;
+
+  z-index: 0;
+}
+
+
+.cover-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 26, 53, 0.86) 0%,
+      rgba(7, 26, 53, 0.45) 28%,
+      rgba(7, 26, 53, 0.20) 52%,
+      rgba(7, 26, 53, 0.76) 100%
+    );
+}
+
+
+.cover-page::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 26, 53, 0.22) 0%,
+      transparent 45%,
+      rgba(7, 26, 53, 0.16) 100%
+    );
+}
+
+
+.cover-gold-line {
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 2mm;
+
+  z-index: 10;
+
+  background: var(--gold);
+}
+
+
+.cover-corner {
+
+  position: absolute;
+
+  width: 24mm;
+
+  height: 24mm;
+
+  z-index: 8;
+
+  pointer-events: none;
+}
+
+
+.cover-corner-top {
+
+  top: 10mm;
+  right: 10mm;
+
+  border-top:
+    0.65mm solid var(--gold);
+
+  border-right:
+    0.65mm solid var(--gold);
+}
+
+
+.cover-corner-bottom {
+
+  bottom: 10mm;
+  left: 10mm;
+
+  border-bottom:
+    0.65mm solid var(--gold);
+
+  border-left:
+    0.65mm solid var(--gold);
+}
+
+
+.cover-content {
+
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+  height: 100%;
+
+  padding:
+    19mm
+    17mm
+    17mm;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+
+.cover-top {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+
+.cover-brand {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5mm;
+}
+
+
+.ttu-logo {
+
+  width: 24mm;
+  height: 24mm;
+
+  flex: 0 0 24mm;
+
+  object-fit: contain;
+}
+
+
+.cover-brand-text {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.5mm;
+}
+
+
+.cover-brand-text strong {
+
+  display: block;
+
+  color: var(--white);
+
+  font-family: var(--font-body);
+
+  font-size: 12pt;
+
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  letter-spacing: 0.055em;
+}
+
+
+.cover-brand-text span {
+
+  display: block;
+
+  color: var(--gold-light);
+
+  font-family: var(--font-body);
+
+  font-size: 9pt;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.cover-year {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 1.5mm;
+
+  padding:
+    3.5mm
+    4.5mm;
+
+  border:
+    0.4mm solid
+    rgba(255, 255, 255, 0.55);
+
+  background:
+    rgba(7, 26, 53, 0.55);
+}
+
+
+.cover-year span {
+
+  color: var(--gold-light);
+
+  font-family: var(--font-body);
+
+  font-size: 8pt;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+}
+
+
+.cover-year strong {
+
+  color: var(--white);
+
+  font-family: var(--font-display);
+
+  font-size: 21pt;
+
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+.cover-middle {
+
+  width: 100%;
+
+  max-width: 170mm;
+
+  margin-top: auto;
+
+  margin-bottom: auto;
+
+  padding-top: 12mm;
+}
+
+
+.cover-kicker {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 4mm;
+
+  color: var(--gold-light);
+
+  font-family: var(--font-body);
+
+  font-size: 10pt;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.cover-kicker::before {
+
+  content: "";
+
+  width: 14mm;
+
+  height: 0.7mm;
+
+  flex-shrink: 0;
+
+  background: var(--gold);
+}
+
+
+.cover-middle h1 {
+
+  margin-top: 6mm;
+
+  color: var(--white);
+
+  font-family: var(--font-display);
+
+  font-size: var(--text-cover-title);
+
+  font-weight: 800;
+
+  line-height: 0.86;
+
+  letter-spacing: -0.035em;
+
+  text-transform: uppercase;
+}
+
+
+.cover-middle h1 span {
+
+  display: block;
+
+  margin-top: 3mm;
+
+  color: var(--gold-light);
+
+  font-style: italic;
+}
+
+
+.cover-title-rule {
+
+  width: 38mm;
+
+  height: 1.3mm;
+
+  margin-top: 8mm;
+
+  background: var(--gold);
+}
+
+
+.cover-middle p {
+
+  max-width: 125mm;
+
+  margin-top: 6mm;
+
+  color: rgba(255, 255, 255, 0.94);
+
+  font-family: var(--font-body);
+
+  font-size: 14pt;
+
+  font-weight: 500;
+
+  line-height: 1.45;
+}
+
+
+.cover-bottom {
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding-top: 6mm;
+
+  border-top:
+    0.4mm solid
+    rgba(255, 255, 255, 0.42);
+}
+
+
+.cover-bottom-left {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2mm;
+}
+
+
+.cover-bottom-left > span {
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 18pt;
+
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+.cover-bottom-left strong {
+
+  color: var(--white);
+
+  font-family: var(--font-body);
+
+  font-size: 9pt;
+
+  font-weight: 800;
+
+  line-height: 1.25;
+
+  letter-spacing: 0.11em;
+}
+
+
+.cover-bottom-right {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 1.5mm;
+}
+
+
+.cover-bottom-right span {
+
+  color: rgba(255, 255, 255, 0.90);
+
+  font-family: var(--font-body);
+
+  font-size: 8.5pt;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.09em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   08. PAGE 02 — EDITORIAL
+========================================================= */
+
+.editorial-page {
+
+  padding:
+    15mm
+    17mm
+    13mm;
+
+  color: var(--dark);
+}
+
+
+.editorial-header {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-bottom: 5mm;
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+
+.editorial-label {
+
+  color: var(--gray-500);
+
+  font-size: 8.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.editorial-content {
+
+  display: grid;
+
+  grid-template-columns:
+    0.88fr 1.12fr;
+
+  gap: 10mm;
+
+  margin-top: 11mm;
+}
+
+
+.editorial-intro h2 {
+
+  margin-top: 5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 34pt;
+
+  font-weight: 700;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.025em;
+}
+
+
+.editorial-intro h2 em {
+
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+
+.editorial-line {
+
+  width: 27mm;
+
+  height: 1.2mm;
+
+  margin-top: 7mm;
+
+  background: var(--gold);
+}
+
+
+.editorial-lead {
+
+  margin-top: 7mm;
+
+  color: var(--gray-700);
+
+  font-family: var(--font-display);
+
+  font-size: 14pt;
+
+  font-weight: 600;
+
+  line-height: 19pt;
+}
+
+
+.editorial-visual {
+
+  min-width: 0;
+}
+
+
+.editorial-image-wrap {
+
+  position: relative;
+
+  height: 76mm;
+
+  overflow: hidden;
+
+  background: var(--navy);
+}
+
+
+.editorial-image-wrap img {
+
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+.image-caption {
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 4mm;
+
+  padding:
+    8mm
+    6mm
+    5mm;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(7, 26, 53, 0.92)
+    );
+}
+
+
+.image-caption span {
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 20pt;
+
+  font-weight: 700;
+}
+
+
+.image-caption p {
+
+  max-width: 68mm;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 8pt;
+
+  line-height: 10pt;
+}
+
+
+.editorial-message {
+
+  display: grid;
+
+  grid-template-columns:
+    0.75fr 1.25fr;
+
+  gap: 10mm;
+
+  margin-top: 10mm;
+
+  padding-top: 7mm;
+
+  border-top:
+    0.5mm solid var(--navy);
+}
+
+
+.message-heading {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 4mm;
+}
+
+
+.message-icon {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 12mm;
+  height: 12mm;
+
+  flex-shrink: 0;
+
+  background: var(--navy);
+
+  color: var(--gold);
+}
+
+
+.message-heading span {
+
+  display: block;
+
+  color: var(--blue);
+
+  font-size: 8pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.13em;
+}
+
+
+.message-heading h3 {
+
+  margin-top: 1.5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 20pt;
+
+  line-height: 1.08;
+}
+
+
+.message-text {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4mm;
+}
+
+
+.message-text p {
+
+  color: var(--gray-700);
+
+  font-size: 10.5pt;
+
+  line-height: 13.5pt;
+}
+
+
+.signature {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.8mm;
+
+  margin-top: 2mm;
+
+  padding-top: 3mm;
+
+  border-top:
+    0.35mm solid var(--border);
+}
+
+
+.signature strong {
+
+  color: var(--navy);
+
+  font-size: 8.5pt;
+
+  letter-spacing: 0.10em;
+}
+
+
+.signature span {
+
+  color: var(--gray-500);
+
+  font-size: 8pt;
+}
+
+
+.editorial-stats {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  margin-top: 9mm;
+
+  border-top:
+    0.4mm solid var(--border);
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+
+.editorial-stat {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 1.5mm;
+
+  min-height: 25mm;
+
+  padding:
+    4mm
+    4mm;
+
+  border-right:
+    0.4mm solid var(--border);
+}
+
+
+.editorial-stat:last-child {
+
+  border-right: 0;
+}
+
+
+.editorial-stat svg {
+
+  color: var(--blue);
+}
+
+
+.editorial-stat strong {
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+
+  line-height: 1;
+}
+
+
+.editorial-stat span {
+
+  color: var(--gray-500);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.10em;
+}
+
+
+.editorial-footer {
+
+  position: absolute;
+
+  left: 17mm;
+  right: 17mm;
+  bottom: 7mm;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 3mm;
+
+  border-top:
+    0.4mm solid var(--border);
+
+  color: var(--gray-500);
+
+  font-size: 8pt;
+
+  font-weight: 700;
+
+  letter-spacing: 0.06em;
+}
+
+
+.footer-arrow {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 2mm;
+}
+
+
+
+
+
+/* =========================================================
+   10. PAGE 04 — CONTENTS
+========================================================= */
+
+.contents-page {
+
+  padding:
+    15mm
+    17mm
+    12mm;
+}
+
+
+.contents-header {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  padding-bottom: 5mm;
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+
+.contents-header h2 {
+
+  margin-top: 5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 34pt;
+
+  line-height: 0.96;
+}
+
+
+.contents-header h2 em {
+
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+
+.contents-intro {
+
+  margin-top: 5mm;
+}
+
+
+.contents-intro p {
+
+  max-width: 165mm;
+
+  color: var(--gray-600);
+
+  font-family: var(--font-display);
+
+  font-size: 11.5pt;
+
+  line-height: 16pt;
+}
+
+
+.contents-feature {
+
+  display: grid;
+
+  grid-template-columns:
+    17mm 1fr auto;
+
+  align-items: center;
+
+  gap: 5mm;
+
+  min-height: 38mm;
+
+  margin-top: 6mm;
+
+  padding: 5mm 6mm;
+
+  background: var(--navy);
+
+  color: var(--white);
+}
+
+
+.contents-feature-number {
+
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 26pt;
+
+  font-weight: 700;
+}
+
+
+.contents-feature-content > span {
+
+  color: var(--gold-light);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+.contents-feature-content h3 {
+
+  margin-top: 1.5mm;
+
+  font-family: var(--font-display);
+
+  font-size: 21pt;
+
+  line-height: 1.02;
+}
+
+
+.contents-feature-content h3 em {
+
+  color: var(--gold-light);
+
+  font-style: italic;
+}
+
+
+.contents-feature-mark {
+
+  color: var(--gold);
+}
+
+
+.contents-list {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  column-gap: 8mm;
+
+  row-gap: 0;
+
+  margin-top: 6mm;
+}
+
+
+.contents-item {
+
+  display: grid;
+
+  grid-template-columns:
+    10mm 9mm 1fr 7mm;
+
+  gap: 2.5mm;
+
+  align-items: center;
+
+  min-height: 25mm;
+
+  padding:
+    3.5mm 0;
+
+  border-bottom:
+    0.35mm solid var(--border);
+}
+
+
+.contents-item-number {
+
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 13pt;
+
+  font-weight: 700;
+}
+
+
+.contents-item-icon {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 8mm;
+  height: 8mm;
+
+  background: var(--gray-100);
+
+  color: var(--blue);
+}
+
+
+.contents-item-body {
+
+  min-width: 0;
+}
+
+
+.contents-item-body > span {
+
+  display: block;
+
+  color: var(--gray-500);
+
+  font-size: 6.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+.contents-item-body h4 {
+
+  margin-top: 0.8mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 13pt;
+
+  line-height: 1.05;
+}
+
+
+.contents-item-body p {
+
+  margin-top: 1mm;
+
+  color: var(--gray-600);
+
+  font-size: 7.5pt;
+
+  line-height: 10pt;
+}
+
+
+.contents-item-arrow {
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  color: var(--blue);
+}
+
+
+.contents-bottom {
+
+  margin-top: 5mm;
+}
+
+
+.contents-quote {
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  padding:
+    5mm 0;
+
+  border-top:
+    0.8mm solid var(--gold);
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+
+.contents-quote span {
+
+  color: var(--blue);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+}
+
+
+.contents-quote strong {
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 16pt;
+
+  line-height: 1.1;
+
+  text-align: right;
+}
+
+
+.contents-footer {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 3mm;
+
+  color: var(--gray-500);
+
+  font-size: 7.5pt;
+
+  font-weight: 700;
+
+  letter-spacing: 0.06em;
+}
+
+
+.contents-footer div {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 2mm;
+}
+
+
+/* =========================================================
+   11. PAGE 05 — SPORTS OVERVIEW
+========================================================= */
+
+.sports-overview-page {
+
+  padding:
+    15mm
+    17mm
+    12mm;
+}
+
+
+.sports-overview-header {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  padding-bottom: 5mm;
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+
+.sports-overview-header h2 {
+
+  margin-top: 5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 34pt;
+
+  line-height: 0.96;
+}
+
+
+.sports-overview-header h2 em {
+
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+
+.sports-overview-intro {
+
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.1fr;
+
+  gap: 10mm;
+
+  margin-top: 7mm;
+}
+
+
+.sports-overview-intro-title > span {
+
+  color: var(--blue);
+
+  font-size: 8pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+.sports-overview-intro-title h3 {
+
+  margin-top: 3mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 22pt;
+
+  line-height: 1.04;
+}
+
+
+.sports-overview-intro-title h3 em {
+
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+
+.sports-overview-intro-text {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3.5mm;
+}
+
+
+.sports-overview-intro-text p {
+
+  color: var(--gray-700);
+
+  font-size: 10pt;
+
+  line-height: 13.5pt;
+}
+
+
+.sports-overview-stat {
+
+  display: grid;
+
+  grid-template-columns:
+    0.35fr 1fr auto;
+
+  align-items: center;
+
+  gap: 6mm;
+
+  margin-top: 7mm;
+
+  padding:
+    5mm 6mm;
+
+  background: var(--navy);
+
+  color: var(--white);
+}
+
+
+.sports-overview-stat-number {
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 35pt;
+
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+.sports-overview-stat-number span {
+
+  color: var(--gold);
+}
+
+
+.sports-overview-stat strong {
+
+  display: block;
+
+  color: var(--white);
+
+  font-size: 9pt;
+
+  letter-spacing: 0.12em;
+}
+
+
+.sports-overview-stat p {
+
+  margin-top: 1.5mm;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 8.5pt;
+
+  line-height: 11.5pt;
+}
+
+
+.sports-overview-stat-icon {
+
+  color: var(--gold);
+}
+
+
+.sports-overview-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 3.5mm;
+
+  margin-top: 7mm;
+}
+
+
+.sport-overview-card {
+
+  position: relative;
+
+  min-height: 42mm;
+
+  padding:
+    4mm;
+
+  border:
+    0.4mm solid var(--border);
+
+  background: var(--gray-50);
+}
+
+
+.sport-card-top {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+.sport-card-number {
+
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 13pt;
+
+  font-weight: 700;
+}
+
+
+.sport-card-icon {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 8mm;
+  height: 8mm;
+
+  background: var(--navy);
+
+  color: var(--gold);
+}
+
+
+.sport-card-category {
+
+  display: block;
+
+  margin-top: 5mm;
+
+  color: var(--gray-500);
+
+  font-size: 6.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+
+.sport-card-content h4 {
+
+  margin-top: 1.5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 13.5pt;
+
+  line-height: 1.05;
+}
+
+
+.sport-card-content p {
+
+  margin-top: 2mm;
+
+  color: var(--gray-600);
+
+  font-size: 7.5pt;
+
+  line-height: 10pt;
+}
+
+
+.sport-card-arrow {
+
+  position: absolute;
+
+  right: 4mm;
+
+  bottom: 3.5mm;
+
+  color: var(--blue);
+}
+
+
+.sports-overview-bottom {
+
+  margin-top: 6mm;
+}
+
+
+.sports-overview-bottom-line {
+
+  width: 100%;
+
+  height: 0.7mm;
+
+  background: var(--gold);
+}
+
+
+.sports-overview-bottom-content {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 3mm;
+
+  color: var(--gray-500);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.09em;
+}
+
+
+.sports-overview-bottom-content strong {
+
+  color: var(--navy);
+}
+
+
+/* =========================================================
+   12. SPORT SECTION PAGES
+========================================================= */
+
+.sport-section-page {
+
+  padding:
+    15mm
+    17mm
+    12mm;
+}
+
+
+.sport-section-header {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  padding-bottom: 5mm;
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+
+.sport-section-header h2 {
+
+  margin-top: 4mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 34pt;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.025em;
+}
+
+
+.sport-section-header h2 em {
+
+  color: var(--blue);
+
+  font-size: 22pt;
+
+  font-style: italic;
+}
+
+
+.sport-section-number {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 16mm;
+  height: 16mm;
+
+  background: var(--navy);
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+
+  font-weight: 700;
+}
+
+
+.sport-section-hero {
+
+  position: relative;
+
+  height: 94mm;
+
+  margin-top: 7mm;
+
+  overflow: hidden;
+
+  background: var(--navy);
+}
+
+
+.sport-section-hero img {
+
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  object-fit: cover;
+}
+
+
+.sport-section-hero-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 26, 53, 0.06),
+      rgba(7, 26, 53, 0.88)
+    );
+}
+
+
+.sport-section-hero-content {
+
+  position: absolute;
+
+  left: 7mm;
+  bottom: 7mm;
+
+  max-width: 115mm;
+
+  color: var(--white);
+}
+
+
+.sport-section-hero-content span {
+
+  color: var(--gold-light);
+
+  font-size: 8pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+.sport-section-hero-content h3 {
+
+  margin-top: 1.5mm;
+
+  font-family: var(--font-display);
+
+  font-size: 28pt;
+
+  line-height: 1;
+}
+
+
+.sport-section-hero-content p {
+
+  margin-top: 2mm;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 10pt;
+}
+
+
+.sport-section-hero-number {
+
+  position: absolute;
+
+  top: 6mm;
+  right: 6mm;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-family: var(--font-display);
+
+  font-size: 30pt;
+
+  font-weight: 700;
+}
+
+
+.sport-section-intro {
+
+  display: grid;
+
+  grid-template-columns:
+    0.65fr 1.35fr;
+
+  gap: 10mm;
+
+  margin-top: 7mm;
+
+  padding-top: 5mm;
+
+  border-top:
+    0.5mm solid var(--navy);
+}
+
+
+.sport-section-intro-title span {
+
+  color: var(--blue);
+
+  font-size: 8pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+.sport-section-intro-title h3 {
+
+  margin-top: 2mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 20pt;
+
+  line-height: 1.05;
+}
+
+
+.sport-section-intro-title h3 em {
+
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+
+.sport-section-intro-text p {
+
+  color: var(--gray-700);
+
+  font-size: 10.5pt;
+
+  line-height: 14pt;
+}
+
+
+.sport-intro-rule {
+
+  width: 22mm;
+
+  height: 1mm;
+
+  margin-top: 5mm;
+
+  background: var(--gold);
+}
+
+
+.sport-section-statistics {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  margin-top: 6mm;
+
+  border-top:
+    0.4mm solid var(--border);
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+
+.sport-stat {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1mm;
+
+  padding: 4mm;
+
+  border-right:
+    0.4mm solid var(--border);
+}
+
+
+.sport-stat:last-child {
+
+  border-right: 0;
+}
+
+
+.sport-stat-index {
+
+  color: var(--gray-400);
+
+  font-size: 7pt;
+
+  font-weight: 800;
+}
+
+
+.sport-stat strong {
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 20pt;
+
+  line-height: 1;
+}
+
+
+.sport-stat > span:last-child {
+
+  color: var(--gray-500);
+
+  font-size: 7pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+
+.sport-section-bottom {
+
+  margin-top: 6mm;
+
+  padding-top: 5mm;
+
+  border-top:
+    0.4mm solid var(--border);
+}
+
+
+.sport-section-block-heading {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 3mm;
+}
+
+
+.sport-block-icon {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 10mm;
+  height: 10mm;
+
+  background: var(--navy);
+
+  color: var(--gold);
+}
+
+
+.sport-section-block-heading span {
+
+  color: var(--blue);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+
+.sport-section-block-heading h3 {
+
+  margin-top: 0.5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 17pt;
+}
+
+/* =========================================================
+   SPORT TEAM PROGRAMME
+========================================================= */
+
+.sport-team-programme {
+  margin-top: 8mm;
+  padding-top: 6mm;
+  border-top: 1px solid var(--border);
+}
+
+.sport-team-programme .sport-section-block-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4mm;
+}
+
+.sport-team-programme .sport-block-icon {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--navy);
+  color: var(--gold);
+}
+
+.sport-team-programme .sport-section-block-heading span {
+  display: block;
+
+  margin-bottom: 1mm;
+
+  color: var(--blue);
+
+  font-family: var(--font-body);
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.sport-team-programme .sport-section-block-heading h3 {
+  margin: 0;
+
+  color: var(--dark);
+
+  font-family: var(--font-display);
+  font-size: 18pt;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+/* =========================================================
+   TEAM PROGRAMME GRID
+========================================================= */
+
+.sport-team-programme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3mm;
+}
+
+.sport-team-programme-card {
+  position: relative;
+
+  min-height: 22mm;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 4mm 5mm;
+
+  background: var(--off-white);
+  border: 1px solid #e4e7ec;
+
+  overflow: hidden;
+}
+
+.sport-team-programme-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 3px;
+  height: 100%;
+
+  background: var(--gold);
+}
+
+.sport-team-programme-card span {
+  display: block;
+
+  margin-bottom: 1.5mm;
+
+  color: var(--gray);
+
+  font-family: var(--font-body);
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sport-team-programme-card strong {
+  display: block;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+  font-size: 15pt;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* =========================================================
+   TEAM PROGRAMME — SINGLE TEAM
+========================================================= */
+
+.sport-team-programme-grid
+  .sport-team-programme-card:only-child {
+  max-width: 50%;
+}
+
+/* =========================================================
+   PRINT SAFETY
+========================================================= */
+
+@media print {
+  .sport-team-programme {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .sport-team-programme-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+
+.achievement-list {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 3mm 7mm;
+
+  margin-top: 4mm;
+}
+
+
+.achievement-item {
+
+  display: grid;
+
+  grid-template-columns: 8mm 1fr;
+
+  gap: 3mm;
+
+  padding-top: 3mm;
+
+  border-top:
+    0.35mm solid var(--border);
+}
+
+
+.achievement-item > span {
+
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 12pt;
+
+  font-weight: 700;
+}
+
+
+.achievement-item p {
+
+  color: var(--gray-600);
+
+  font-size: 8.5pt;
+
+  line-height: 11.5pt;
+}
+
+
+.sport-section-footer {
+
+  position: absolute;
+
+  left: 17mm;
+  right: 17mm;
+  bottom: 7mm;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 3mm;
+
+  border-top:
+    0.4mm solid var(--border);
+
+  color: var(--gray-500);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+}
+
+
+.sport-section-footer div {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 2mm;
+}
+
+
+/* =========================================================
+   13. TEAM PROFILE PAGES
+========================================================= */
+
+.team-page {
+
+  padding:
+    13mm
+    17mm
+    12mm;
+}
+
+
+.team-page-header {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  padding-bottom: 4mm;
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+
+.team-page-kicker {
+
+  color: var(--blue);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.10em;
+
+  text-transform: uppercase;
+}
+
+
+.team-page-header h2 {
+
+  margin-top: 2mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 27pt;
+
+  line-height: 1;
+}
+
+
+.team-page-header p {
+
+  margin-top: 1mm;
+
+  color: var(--gray-500);
+
+  font-size: 8pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+.team-page-number {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 13mm;
+  height: 13mm;
+
+  background: var(--navy);
+
+  color: var(--gold);
+
+  flex-shrink: 0;
+}
+
+
+.team-squad-hero {
+
+  position: relative;
+
+  height: 67mm;
+
+  margin-top: 6mm;
+
+  overflow: hidden;
+
+  background: var(--navy);
+}
+
+
+.team-squad-hero img {
+
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+.team-squad-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 35%,
+      rgba(7, 26, 53, 0.90) 100%
+    );
+}
+
+
+.team-squad-caption {
+
+  position: absolute;
+
+  left: 6mm;
+  bottom: 5mm;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1mm;
+}
+
+
+.team-squad-caption span {
+
+  color: var(--gold-light);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+}
+
+
+.team-squad-caption strong {
+
+  color: var(--white);
+
+  font-family: var(--font-display);
+
+  font-size: 22pt;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   14. TEAM SECTION TITLES
+========================================================= */
+
+.team-section-title {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 3mm;
+
+  padding-bottom: 3mm;
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+
+.team-section-title > span {
+
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 13pt;
+
+  font-weight: 700;
+}
+
+
+.team-section-title small {
+
+  display: block;
+
+  color: var(--blue);
+
+  font-size: 7pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.10em;
+}
+
+
+.team-section-title h3 {
+
+  margin-top: 0.5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 17pt;
+
+  line-height: 1;
+}
+
+
+.team-section-title > svg {
+
+  margin-left: auto;
+
+  color: var(--gold);
+}
+
+
+/* =========================================================
+   15. TEAM LEADERSHIP
+========================================================= */
+
+.team-leadership {
+
+  margin-top: 6mm;
+}
+
+
+.team-leadership-content {
+
+  display: grid;
+
+  grid-template-columns:
+    1.25fr 0.75fr;
+
+  gap: 6mm;
+
+  margin-top: 4mm;
+}
+
+
+.captain-card {
+
+  display: grid;
+
+  grid-template-columns:
+    42mm 1fr;
+
+  min-height: 46mm;
+
+  border:
+    0.4mm solid var(--border);
+
+  background: var(--gray-50);
+}
+
+
+.captain-photo {
+
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 46mm;
+
+  background: var(--navy);
+}
+
+
+.captain-photo img {
+
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  object-fit: cover;
+}
+
+
+.captain-photo span,
+.coach-photo span {
+
+  position: absolute;
+
+  left: 3mm;
+  bottom: 3mm;
+
+  padding:
+    1mm 2mm;
+
+  background: var(--gold);
+
+  color: var(--navy);
+
+  font-size: 6.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+
+.captain-info {
+
+  padding: 5mm;
+}
+
+
+.captain-label {
+
+  display: block;
+
+  color: var(--blue);
+
+  font-size: 7pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.10em;
+
+  text-transform: uppercase;
+}
+
+
+.captain-info h4,
+.coach-card h4 {
+
+  margin-top: 2mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 17pt;
+
+  line-height: 1.04;
+}
+
+
+.captain-role {
+
+  margin-top: 1mm;
+
+  color: var(--gray-500);
+
+  font-size: 8pt;
+
+  font-weight: 700;
+}
+
+
+.captain-remark {
+
+  position: relative;
+
+  margin: 3mm 0 0;
+
+  padding:
+    3mm 3mm 0 7mm;
+
+  border-top:
+    0.35mm solid var(--border);
+}
+
+
+.quote-mark {
+
+  position: absolute;
+
+  left: 0;
+  top: 1mm;
+
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 23pt;
+
+  line-height: 1;
+}
+
+
+.captain-remark p {
+
+  color: var(--gray-600);
+
+  font-size: 8pt;
+
+  line-height: 11pt;
+}
+
+
+.captain-remark footer {
+
+  margin-top: 2mm;
+
+  color: var(--gray-500);
+
+  font-size: 7pt;
+
+  font-weight: 700;
+}
+
+
+.coach-card {
+
+  display: grid;
+
+  grid-template-columns: 28mm 1fr;
+
+  min-height: 46mm;
+
+  border:
+    0.4mm solid var(--border);
+
+  background: var(--gray-50);
+}
+
+
+.coach-photo {
+
+  position: relative;
+
+  min-height: 46mm;
+
+  overflow: hidden;
+
+  background: var(--navy);
+}
+
+
+.coach-photo img {
+
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  object-fit: cover;
+}
+
+
+.coach-card > div:last-child {
+
+  padding: 5mm 4mm;
+}
+
+
+.coach-remark {
+
+  margin-top: 3mm;
+
+  color: var(--gray-600);
+
+  font-size: 8pt;
+
+  line-height: 11pt;
+}
+
+
+/* =========================================================
+   16. TEAM SQUAD
+========================================================= */
+
+.team-squad-section {
+
+  margin-top: 6mm;
+}
+
+
+.player-total {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 11mm;
+  height: 8mm;
+
+  margin-left: auto;
+
+  background: var(--navy);
+
+  color: var(--gold);
+
+  font-size: 8pt;
+}
+
+
+.team-player-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  column-gap: 8mm;
+
+  margin-top: 3mm;
+}
+
+
+.team-player-row {
+
+  display: grid;
+
+  grid-template-columns:
+    8mm 1fr;
+
+  gap: 2mm;
+
+  align-items: center;
+
+  min-height: 7mm;
+
+  border-bottom:
+    0.3mm solid var(--border);
+}
+
+
+.team-player-row > span {
+
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 9pt;
+
+  font-weight: 700;
+}
+
+
+.team-player-row strong {
+
+  color: var(--gray-700);
+
+  font-size: 8.5pt;
+
+  line-height: 10pt;
+}
+
+
+/* =========================================================
+   17. TEAM ACHIEVEMENTS
+========================================================= */
+
+.team-achievements-section {
+
+  margin-top: 6mm;
+}
+
+
+.team-achievements-list {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 3mm 7mm;
+
+  margin-top: 3mm;
+}
+
+
+.team-achievement-row {
+
+  display: grid;
+
+  grid-template-columns:
+    9mm 1fr;
+
+  gap: 3mm;
+
+  align-items: start;
+
+  padding-top: 3mm;
+
+  border-top:
+    0.35mm solid var(--border);
+}
+
+
+.achievement-medal {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 8mm;
+  height: 8mm;
+
+  background: var(--navy);
+
+  color: var(--gold);
+}
+
+
+.team-achievement-row p {
+
+  color: var(--gray-600);
+
+  font-size: 8.5pt;
+
+  line-height: 11.5pt;
+}
+
+
+/* =========================================================
+   18. TEAM HIGHLIGHTS
+========================================================= */
+
+.team-highlights-section {
+
+  margin-top: 6mm;
+}
+
+
+.team-highlights-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 4mm;
+
+  margin-top: 3mm;
+}
+
+
+.team-highlight-card {
+
+  display: grid;
+
+  grid-template-columns:
+    8mm 1fr;
+
+  gap: 3mm;
+
+  padding: 4mm;
+
+  background: var(--gray-50);
+
+  border:
+    0.4mm solid var(--border);
+}
+
+
+.team-highlight-card > span {
+
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 12pt;
+
+  font-weight: 700;
+}
+
+
+.team-highlight-card p {
+
+  color: var(--gray-600);
+
+  font-size: 8.5pt;
+
+  line-height: 11.5pt;
+}
+
+
+/* =========================================================
+   19. TEAM FOOTER
+========================================================= */
+
+.team-page-footer {
+
+  position: absolute;
+
+  left: 17mm;
+  right: 17mm;
+  bottom: 7mm;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 3mm;
+
+  border-top:
+    0.4mm solid var(--border);
+
+  color: var(--gray-500);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+}
+
+
+.team-page-footer strong {
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 9pt;
+}
+
+
+/* =========================================================
+   20. IMAGE SYSTEM
+========================================================= */
+
+.magazine-image-frame {
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--navy);
+}
+
+
+.magazine-image-frame img {
+
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  object-fit: cover;
+}
+
+
+.image-caption {
+
+  font-family: var(--font-body);
+
+  font-size: 8pt;
+
+  line-height: 10pt;
+
+  color: var(--gray-600);
+}
+
+
+/* =========================================================
+   21. SCREEN PREVIEW
+========================================================= */
+
+@media screen {
+
+  .magazine-page {
+
+    box-shadow:
+      var(--page-shadow);
+  }
+}
+
+
+/* =========================================================
+   22. PRINT SYSTEM
+========================================================= */
+
+@media print {
+
+  @page {
+
+    size: A4 portrait;
+
+    margin: 0;
+  }
+
+
+  html {
+
+    width: 210mm;
+
+    margin: 0;
+
+    padding: 0;
+
+    background: #ffffff;
+  }
+
+
+  body {
+
+    width: 210mm;
+
+    margin: 0;
+
+    padding: 0;
+
+    background: #ffffff;
+
+    font-size: 10.5pt;
+
+    line-height: 13.5pt;
+
+    -webkit-print-color-adjust: exact;
+
+    print-color-adjust: exact;
+  }
+
+
+  #root {
+
+    width: 210mm;
+
+    margin: 0;
+
+    padding: 0;
+  }
+
+
+  .magazine {
+
+    width: 210mm;
+
+    margin: 0;
+
+    padding: 0;
+  }
+
+
+  .magazine-page {
+
+    width: 210mm;
+
+    height: 297mm;
+
+    min-width: 210mm;
+
+    max-width: 210mm;
+
+    min-height: 297mm;
+
+    max-height: 297mm;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    box-shadow: none;
+
+    break-after: page;
+
+    page-break-after: always;
+  }
+
+
+  .magazine-page:last-child {
+
+    break-after: auto;
+
+    page-break-after: auto;
+  }
+
+
+  img {
+
+    -webkit-print-color-adjust: exact;
+
+    print-color-adjust: exact;
+  }
+
+
+  .cover-page {
+
+    background: var(--navy);
+  }
+
+
+  .cover-image,
+  .cover-overlay,
+  .cover-page::after,
+  .cover-gold-line,
+  .cover-corner {
+
+    -webkit-print-color-adjust: exact;
+
+    print-color-adjust: exact;
+  }
+
+
+  .cover-middle h1 {
+
+    font-size: 62pt;
+  }
+
+
+  .cover-middle p {
+
+    font-size: 14pt;
+  }
+
+
+  .editorial-page,
+  .management-page,
+  .contents-page,
+  .sports-overview-page,
+  .sport-section-page,
+  .team-page {
+
+    box-shadow: none;
+  }
+}
+
+
+/* =========================================================
+   23. PRINT SAFETY
+========================================================= */
+
+@media print {
+
+  h1,
+  h2,
+  h3,
+  h4 {
+
+    break-after: avoid;
+
+    page-break-after: avoid;
+  }
+
+
+  img {
+
+    break-inside: avoid;
+
+    page-break-inside: avoid;
+  }
+
+
+  .management-card,
+  .sport-overview-card,
+  .contents-item,
+  .achievement-item,
+  .team-player-row,
+  .team-achievement-row,
+  .team-highlight-card {
+
+    break-inside: avoid;
+
+    page-break-inside: avoid;
+  }
+}
+
+/* =========================================================
+   13. PAGE 22 — ACHIEVEMENTS & HIGHLIGHTS
+========================================================= */
+
+.achievements-page {
+  padding:
+    15mm
+    17mm
+    12mm;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.achievements-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 5mm;
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+
+.achievements-header h2 {
+  margin-top: 5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 34pt;
+
+  line-height: 0.96;
+}
+
+
+.achievements-header h2 em {
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+
+.achievements-number {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 16mm;
+  height: 16mm;
+
+  background: var(--navy);
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.achievements-intro {
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.1fr;
+
+  gap: 10mm;
+
+  margin-top: 7mm;
+}
+
+
+.achievements-intro-title > span {
+  color: var(--blue);
+
+  font-size: 8pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+.achievements-intro-title h3 {
+  margin-top: 3mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 22pt;
+
+  line-height: 1.04;
+}
+
+
+.achievements-intro-title h3 em {
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+
+.achievements-intro-text {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3.5mm;
+}
+
+
+.achievements-intro-text p {
+  color: var(--gray-700);
+
+  font-size: 10pt;
+
+  line-height: 13.5pt;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.achievements-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 4mm;
+
+  margin-top: 7mm;
+}
+
+
+.achievement-summary-card {
+  display: grid;
+
+  grid-template-columns:
+    11mm 1fr;
+
+  align-items: center;
+
+  gap: 4mm;
+
+  min-height: 25mm;
+
+  padding:
+    4mm 5mm;
+
+  background: var(--navy);
+
+  color: var(--white);
+}
+
+
+.achievement-summary-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 10mm;
+  height: 10mm;
+
+  background: var(--gold);
+
+  color: var(--navy);
+}
+
+
+.achievement-summary-card strong {
+  display: block;
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 22pt;
+
+  line-height: 1;
+}
+
+
+.achievement-summary-card span {
+  display: block;
+
+  margin-top: 1mm;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 6.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   ACHIEVEMENT SECTION
+========================================================= */
+
+.achievements-section {
+  margin-top: 6mm;
+
+  padding-top: 5mm;
+
+  border-top:
+    0.4mm solid var(--border);
+}
+
+
+.achievements-section-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 3mm;
+
+  margin-bottom: 4mm;
+}
+
+
+.achievements-section-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 10mm;
+  height: 10mm;
+
+  background: var(--navy);
+
+  color: var(--gold);
+}
+
+
+.achievements-section-heading span {
+  display: block;
+
+  color: var(--blue);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+
+.achievements-section-heading h3 {
+  margin-top: 0.5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 18pt;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   ACHIEVEMENT LIST
+========================================================= */
+
+.achievement-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 3mm 7mm;
+}
+
+
+.achievement-item {
+  display: grid;
+
+  grid-template-columns:
+    8mm 1fr;
+
+  gap: 3mm;
+
+  min-height: 18mm;
+
+  padding-top: 3mm;
+
+  border-top:
+    0.35mm solid var(--border);
+}
+
+
+.achievement-item > span {
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 12pt;
+
+  font-weight: 700;
+}
+
+
+.achievement-item strong {
+  display: block;
+
+  margin-bottom: 1mm;
+
+  color: var(--navy);
+
+  font-size: 7pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+.achievement-item p {
+  color: var(--gray-600);
+
+  font-size: 8.5pt;
+
+  line-height: 11.5pt;
+}
+
+
+/* =========================================================
+   EMPTY ACHIEVEMENT STATE
+========================================================= */
+
+.achievements-empty {
+  display: grid;
+
+  grid-template-columns:
+    12mm 1fr;
+
+  align-items: center;
+
+  gap: 4mm;
+
+  min-height: 25mm;
+
+  padding:
+    4mm 5mm;
+
+  background: var(--gray-50);
+
+  border:
+    0.4mm solid var(--border);
+
+  border-left:
+    1mm solid var(--gold);
+}
+
+
+.achievements-empty-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 10mm;
+  height: 10mm;
+
+  background: var(--navy);
+
+  color: var(--gold);
+}
+
+
+.achievements-empty span {
+  display: block;
+
+  margin-bottom: 1mm;
+
+  color: var(--blue);
+
+  font-size: 7pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+
+.achievements-empty p {
+  color: var(--gray-600);
+
+  font-size: 8.5pt;
+
+  line-height: 11.5pt;
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+========================================================= */
+
+.highlights-section {
+  margin-top: 6mm;
+
+  padding-top: 5mm;
+
+  border-top:
+    0.4mm solid var(--border);
+}
+
+
+.highlights-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 3mm 7mm;
+}
+
+
+.highlight-item {
+  display: grid;
+
+  grid-template-columns:
+    8mm 1fr;
+
+  gap: 3mm;
+
+  min-height: 24mm;
+
+  padding:
+    4mm 5mm;
+
+  background: var(--navy);
+}
+
+
+.highlight-item > span {
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 12pt;
+
+  font-weight: 700;
+}
+
+
+.highlight-item small {
+  display: block;
+
+  margin-bottom: 1.5mm;
+
+  color: var(--gold-light);
+
+  font-size: 6.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+.highlight-item p {
+  color: rgba(255, 255, 255, 0.86);
+
+  font-size: 8pt;
+
+  line-height: 11pt;
+}
+
+
+/* =========================================================
+   EMPTY HIGHLIGHTS
+========================================================= */
+
+.highlights-empty {
+  display: grid;
+
+  grid-template-columns:
+    12mm 1fr;
+
+  align-items: center;
+
+  gap: 4mm;
+
+  min-height: 25mm;
+
+  padding:
+    4mm 5mm;
+
+  background: var(--navy);
+
+  color: var(--white);
+}
+
+
+.highlights-empty-mark {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 10mm;
+  height: 10mm;
+
+  border:
+    0.35mm solid
+    rgba(242, 181, 68, 0.5);
+
+  color: var(--gold);
+}
+
+
+.highlights-empty span {
+  display: block;
+
+  margin-bottom: 1mm;
+
+  color: var(--gold-light);
+
+  font-size: 7pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+
+.highlights-empty p {
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 8.5pt;
+
+  line-height: 11.5pt;
+}
+
+
+/* =========================================================
+   EDITORIAL CLOSING
+========================================================= */
+
+.achievements-closing {
+  display: grid;
+
+  grid-template-columns:
+    13mm 1fr;
+
+  align-items: center;
+
+  gap: 4mm;
+
+  margin-top: auto;
+
+  padding:
+    5mm 6mm;
+
+  background: var(--navy);
+
+  color: var(--white);
+}
+
+
+.achievements-closing-mark {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 11mm;
+  height: 11mm;
+
+  border:
+    0.35mm solid
+    rgba(242, 181, 68, 0.5);
+
+  color: var(--gold);
+}
+
+
+.achievements-closing span {
+  display: block;
+
+  margin-bottom: 1mm;
+
+  color: var(--gold-light);
+
+  font-size: 6.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+.achievements-closing strong {
+  display: block;
+
+  color: var(--white);
+
+  font-family: var(--font-display);
+
+  font-size: 16pt;
+
+  line-height: 1.05;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.achievements-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 3mm;
+
+  padding-top: 3mm;
+
+  border-top:
+    0.4mm solid var(--border);
+
+  color: var(--gray-500);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+}
+
+
+.achievements-footer div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2mm;
+}
+
+
+.achievements-footer > span:last-child {
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 11pt;
+}
+
+
+/* =========================================================
+   PRINT SAFETY
+========================================================= */
+
+@media print {
+
+  .achievements-page {
+    width: 210mm;
+    height: 297mm;
+
+    min-height: 297mm;
+
+    padding:
+      15mm
+      17mm
+      12mm;
+
+    overflow: hidden;
+
+    break-after: page;
+    page-break-after: always;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+
+  .achievements-header,
+  .achievements-intro,
+  .achievements-summary,
+  .achievements-section,
+  .highlights-section,
+  .achievements-closing,
+  .achievements-footer {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+
+  .achievement-item,
+  .highlight-item,
+  .achievements-empty,
+  .highlights-empty {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+}
+
+/* =========================================================
+   SPORTS GALLERY
+========================================================= */
+
+.sports-gallery-page {
+  width: 210mm;
+  height: 297mm;
+  min-height: 297mm;
+
+  padding:
+    15mm
+    17mm
+    12mm;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--white);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.sports-gallery-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 5mm;
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+.sports-gallery-header h2 {
+  margin-top: 5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 34pt;
+
+  line-height: 0.96;
+}
+
+.sports-gallery-header h2 em {
+  color: var(--blue);
+  font-style: italic;
+}
+
+.sports-gallery-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16mm;
+  height: 16mm;
+
+  background: var(--navy);
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.sports-gallery-intro {
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.1fr;
+
+  gap: 10mm;
+
+  margin-top: 7mm;
+}
+
+.sports-gallery-intro-title > span {
+  color: var(--blue);
+
+  font-size: 8pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.sports-gallery-intro-title h3 {
+  margin-top: 3mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 22pt;
+
+  line-height: 1.04;
+}
+
+.sports-gallery-intro-title h3 em {
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+.sports-gallery-intro-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3.5mm;
+}
+
+.sports-gallery-intro-text p {
+  color: var(--gray-700);
+
+  font-size: 10pt;
+
+  line-height: 13.5pt;
+}
+
+
+/* =========================================================
+   GALLERY GRID
+========================================================= */
+
+.sports-gallery-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 4mm;
+
+  margin-top: 7mm;
+
+  min-height: 0;
+}
+
+.sports-gallery-grid-first {
+  grid-template-rows:
+    60mm 60mm;
+
+  height: 124mm;
+}
+
+.sports-gallery-grid-full {
+  grid-template-rows:
+    74mm 74mm;
+
+  height: 152mm;
+
+  margin-top: 9mm;
+}
+
+
+/* =========================================================
+   GALLERY ITEM
+========================================================= */
+
+.sports-gallery-item {
+  min-width: 0;
+
+  min-height: 0;
+
+  margin: 0;
+
+  overflow: hidden;
+}
+
+.sports-gallery-item-featured {
+  grid-column: span 2;
+
+  grid-row: span 2;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.sports-gallery-image {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: var(--navy);
+}
+
+.sports-gallery-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.sports-gallery-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 26, 53, 0.02) 35%,
+      rgba(7, 26, 53, 0.86) 100%
+    );
+}
+
+
+/* =========================================================
+   PHOTO NUMBER
+========================================================= */
+
+.sports-gallery-image-number {
+  position: absolute;
+
+  top: 4mm;
+  left: 4mm;
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 13pt;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PHOTO CAPTION
+========================================================= */
+
+.sports-gallery-caption {
+  position: absolute;
+
+  left: 4mm;
+  right: 4mm;
+  bottom: 4mm;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1mm;
+}
+
+.sports-gallery-caption small {
+  color: var(--gold-light);
+
+  font-size: 6.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.sports-gallery-caption strong {
+  color: var(--white);
+
+  font-family: var(--font-display);
+
+  font-size: 9.5pt;
+
+  line-height: 1.08;
+}
+
+.sports-gallery-item-featured
+  .sports-gallery-caption strong {
+  font-size: 16pt;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.sports-gallery-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: auto;
+
+  padding-top: 3mm;
+
+  border-top:
+    0.4mm solid var(--border);
+
+  color: var(--gray-500);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+}
+
+.sports-gallery-footer div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2mm;
+}
+
+.sports-gallery-footer > span:last-child {
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 11pt;
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+
+  .sports-gallery-page {
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+
+    overflow: hidden;
+
+    break-after: page;
+    page-break-after: always;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .sports-gallery-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .sports-gallery-image {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+}
+
+/* =========================================================
+   FIVE-PAGE VISUAL FEATURE
+   PAGES 23–27
+========================================================= */
+
+.gallery-page {
+  width: 210mm;
+  height: 297mm;
+  min-height: 297mm;
+
+  padding:
+    15mm
+    17mm
+    12mm;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--white);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.gallery-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 5mm;
+
+  border-bottom:
+    0.4mm solid var(--border);
+}
+
+.gallery-header h2 {
+  margin-top: 5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 34pt;
+
+  line-height: 0.96;
+}
+
+.gallery-header h2 em {
+  color: var(--blue);
+  font-style: italic;
+}
+
+.gallery-page-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16mm;
+  height: 16mm;
+
+  background: var(--navy);
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.gallery-intro {
+  display: grid;
+
+  grid-template-columns:
+    0.85fr 1.15fr;
+
+  gap: 10mm;
+
+  margin-top: 6mm;
+
+  align-items: end;
+}
+
+.gallery-intro-kicker {
+  color: var(--blue);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.gallery-intro h3 {
+  margin-top: 2.5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 20pt;
+
+  line-height: 1;
+}
+
+.gallery-intro h3 em {
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+.gallery-intro > p {
+  color: var(--gray-600);
+
+  font-size: 9pt;
+
+  line-height: 12.5pt;
+}
+
+
+/* =========================================================
+   GENERAL GALLERY GRID
+========================================================= */
+
+.gallery-grid {
+  display: grid;
+
+  gap: 3mm;
+
+  margin-top: 6mm;
+
+  flex: 1;
+
+  min-height: 0;
+}
+
+.gallery-photo {
+  position: relative;
+
+  min-width: 0;
+  min-height: 0;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  background: var(--navy);
+}
+
+.gallery-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.gallery-photo-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 26, 53, 0.02) 30%,
+      rgba(7, 26, 53, 0.86) 100%
+    );
+}
+
+.gallery-photo-number {
+  position: absolute;
+
+  top: 3mm;
+  left: 3mm;
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 12pt;
+
+  font-weight: 700;
+}
+
+.gallery-photo figcaption,
+.gallery-photo > figcaption {
+  position: absolute;
+
+  left: 4mm;
+  right: 4mm;
+  bottom: 4mm;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1mm;
+}
+
+.gallery-photo figcaption small {
+  color: var(--gold-light);
+
+  font-size: 6pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.gallery-photo figcaption strong {
+  color: var(--white);
+
+  font-family: var(--font-display);
+
+  font-size: 9.5pt;
+
+  line-height: 1.05;
+}
+
+
+/* =========================================================
+   PAGE 23
+   SPORTS & ATHLETICS
+========================================================= */
+
+.gallery-grid-1 {
+  grid-template-columns:
+    1.35fr 0.8fr 0.8fr;
+
+  grid-template-rows:
+    1fr 1fr;
+}
+
+.gallery-grid-1 .gallery-photo-1 {
+  grid-row: span 2;
+}
+
+.gallery-grid-1 .gallery-photo-1 figcaption strong {
+  font-size: 16pt;
+}
+
+
+/* =========================================================
+   PAGE 24
+   TEAMS & COMPETITION
+========================================================= */
+
+.gallery-grid-2 {
+  grid-template-columns:
+    0.8fr 1.4fr 0.8fr;
+
+  grid-template-rows:
+    1fr 1fr;
+}
+
+.gallery-grid-2 .gallery-photo-2 {
+  grid-row: span 2;
+}
+
+.gallery-grid-2 .gallery-photo-2 figcaption strong {
+  font-size: 16pt;
+}
+
+
+/* =========================================================
+   PAGE 25
+   DRAMA & PERFORMING ARTS
+========================================================= */
+
+.gallery-grid-3 {
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  grid-template-rows:
+    1.25fr 0.75fr;
+}
+
+.gallery-grid-3 .gallery-photo-1 {
+  grid-column: span 2;
+}
+
+.gallery-grid-3 .gallery-photo-1 figcaption strong {
+  font-size: 16pt;
+}
+
+
+/* =========================================================
+   PAGE 26
+   CULTURAL WEEK
+========================================================= */
+
+.gallery-grid-4 {
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  grid-template-rows:
+    0.75fr 1.25fr;
+}
+
+.gallery-grid-4 .gallery-photo-4 {
+  grid-column: span 2;
+}
+
+.gallery-grid-4 .gallery-photo-4 figcaption strong {
+  font-size: 16pt;
+}
+
+
+/* =========================================================
+   PAGE 27
+   TTU LIFE & EVENTS
+========================================================= */
+
+.gallery-grid-5 {
+  grid-template-columns:
+    1fr 1fr 1.35fr;
+
+  grid-template-rows:
+    1fr 1fr;
+}
+
+.gallery-grid-5 .gallery-photo-6 {
+  grid-row: span 2;
+}
+
+.gallery-grid-5 .gallery-photo-6 figcaption strong {
+  font-size: 16pt;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.gallery-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 4mm;
+
+  padding-top: 3mm;
+
+  border-top:
+    0.4mm solid var(--border);
+
+  color: var(--gray-500);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+}
+
+.gallery-footer div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2mm;
+}
+
+.gallery-footer > span:last-child {
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 11pt;
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+
+  .gallery-page {
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+
+    overflow: hidden;
+
+    break-after: page;
+    page-break-after: always;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .gallery-header,
+  .gallery-intro,
+  .gallery-grid,
+  .gallery-footer {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .gallery-photo {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+}
+
+/* =========================================================
+   ATHLETE SPOTLIGHT
+   PAGES 23–24
+========================================================= */
+
+.athlete-spotlight-page {
+  width: 210mm;
+  height: 297mm;
+  min-height: 297mm;
+
+  padding: 15mm 17mm 12mm;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--white);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.athlete-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 5mm;
+
+  border-bottom: 0.4mm solid var(--border);
+}
+
+.athlete-page-header h2 {
+  margin-top: 5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 34pt;
+
+  line-height: 0.96;
+}
+
+.athlete-page-header h2 em {
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+.athlete-page-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16mm;
+  height: 16mm;
+
+  background: var(--navy);
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PAGE 23 INTRO
+========================================================= */
+
+.athlete-spotlight-intro {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 10mm;
+
+  margin-top: 7mm;
+
+  align-items: end;
+}
+
+.athlete-intro-kicker {
+  color: var(--blue);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+}
+
+.athlete-spotlight-intro h3 {
+  margin-top: 2.5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 23pt;
+
+  line-height: 1;
+}
+
+.athlete-spotlight-intro h3 em {
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+.athlete-intro-text {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3mm;
+}
+
+.athlete-intro-text p {
+  color: var(--gray-600);
+
+  font-size: 9pt;
+
+  line-height: 12.5pt;
+}
+
+
+/* =========================================================
+   ATHLETE GRID
+========================================================= */
+
+.athlete-profiles-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  grid-template-rows: 1.25fr 0.9fr;
+
+  gap: 4mm;
+
+  flex: 1;
+
+  min-height: 0;
+
+  margin-top: 6mm;
+}
+
+
+/* =========================================================
+   ATHLETE CARD
+========================================================= */
+
+.athlete-profile-card {
+  display: grid;
+
+  grid-template-rows: 50mm 1fr;
+
+  min-height: 0;
+
+  overflow: hidden;
+
+  background: var(--white);
+
+  border: 0.4mm solid var(--border);
+
+  break-inside: avoid;
+
+  page-break-inside: avoid;
+}
+
+
+/* First athlete is the main feature */
+
+.athlete-profile-card-featured {
+  grid-column: span 2;
+
+  grid-template-columns: 1.05fr 0.95fr;
+
+  grid-template-rows: 1fr;
+}
+
+
+/* =========================================================
+   PHOTO
+========================================================= */
+
+.athlete-profile-photo {
+  position: relative;
+
+  min-height: 0;
+
+  overflow: hidden;
+
+  background: var(--navy);
+}
+
+.athlete-profile-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.athlete-profile-photo-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 26, 53, 0.02) 30%,
+      rgba(7, 26, 53, 0.88) 100%
+    );
+}
+
+.athlete-profile-number {
+  position: absolute;
+
+  top: 4mm;
+  left: 4mm;
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 13pt;
+
+  font-weight: 700;
+}
+
+.athlete-profile-photo-caption {
+  position: absolute;
+
+  left: 5mm;
+  right: 5mm;
+  bottom: 4mm;
+}
+
+.athlete-profile-photo-caption small {
+  display: block;
+
+  margin-bottom: 1mm;
+
+  color: var(--gold-light);
+
+  font-size: 6.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+}
+
+.athlete-profile-photo-caption h3 {
+  color: var(--white);
+
+  font-family: var(--font-display);
+
+  font-size: 17pt;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.athlete-profile-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3mm;
+
+  padding: 4.5mm 5mm;
+
+  min-width: 0;
+}
+
+.athlete-profile-role {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2mm;
+
+  color: var(--blue);
+
+  font-size: 7pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.athlete-profile-role svg {
+  flex: 0 0 auto;
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.athlete-profile-quote {
+  display: grid;
+
+  grid-template-columns: 7mm 1fr;
+
+  gap: 2mm;
+
+  padding-top: 2.5mm;
+
+  border-top: 0.35mm solid var(--border);
+}
+
+.athlete-profile-quote svg {
+  color: var(--gold);
+}
+
+.athlete-profile-quote p {
+  color: var(--gray-600);
+
+  font-family: var(--font-display);
+
+  font-size: 9pt;
+
+  line-height: 12pt;
+}
+
+
+/* =========================================================
+   ACHIEVEMENT
+========================================================= */
+
+.athlete-profile-achievement {
+  display: grid;
+
+  grid-template-columns: 7mm 1fr;
+
+  gap: 2mm;
+
+  margin-top: auto;
+
+  padding-top: 2.5mm;
+
+  border-top: 0.35mm solid var(--border);
+}
+
+.athlete-profile-achievement svg {
+  color: var(--gold);
+}
+
+.athlete-profile-achievement span {
+  display: block;
+
+  color: var(--blue);
+
+  font-size: 6pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.athlete-profile-achievement p {
+  margin-top: 1mm;
+
+  color: var(--gray-700);
+
+  font-size: 7.5pt;
+
+  line-height: 10pt;
+}
+
+
+/* =========================================================
+   PAGE 24 INTRO
+========================================================= */
+
+.athlete-continuation-intro {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 10mm;
+
+  margin-top: 7mm;
+
+  padding-bottom: 5mm;
+
+  border-bottom: 0.4mm solid var(--border);
+
+  align-items: end;
+}
+
+.athlete-continuation-intro span {
+  color: var(--blue);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+}
+
+.athlete-continuation-intro h3 {
+  margin-top: 2.5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 22pt;
+
+  line-height: 1;
+}
+
+.athlete-continuation-intro h3 em {
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+.athlete-continuation-intro > p {
+  color: var(--gray-600);
+
+  font-size: 9pt;
+
+  line-height: 12.5pt;
+}
+
+
+/* =========================================================
+   PAGE 24 GRID
+========================================================= */
+
+.athlete-profiles-grid-page-two {
+  grid-template-rows: 1fr 1fr;
+
+  margin-top: 6mm;
+}
+
+.athlete-profiles-grid-page-two
+.athlete-profile-card {
+  grid-column: span 1;
+
+  grid-template-rows: 55mm 1fr;
+}
+
+
+/* =========================================================
+   CLOSING FEATURE
+========================================================= */
+
+.athlete-closing-feature {
+  display: grid;
+
+  grid-template-columns: 14mm 1fr auto;
+
+  align-items: center;
+
+  gap: 5mm;
+
+  margin-top: 5mm;
+
+  padding: 6mm;
+
+  background: var(--navy);
+
+  color: var(--white);
+}
+
+.athlete-closing-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 11mm;
+  height: 11mm;
+
+  border: 0.35mm solid
+    rgba(242, 181, 68, 0.5);
+
+  color: var(--gold);
+}
+
+.athlete-closing-feature span {
+  display: block;
+
+  margin-bottom: 1.5mm;
+
+  color: var(--gold-light);
+
+  font-size: 6.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.athlete-closing-feature strong {
+  color: var(--white);
+
+  font-family: var(--font-display);
+
+  font-size: 17pt;
+
+  line-height: 0.98;
+}
+
+.athlete-closing-feature strong em {
+  color: var(--gold-light);
+
+  font-style: italic;
+}
+
+.athlete-closing-mark {
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 24pt;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.athlete-page-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 3mm;
+
+  padding-top: 3mm;
+
+  border-top: 0.4mm solid var(--border);
+
+  color: var(--gray-500);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+}
+
+.athlete-page-footer div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2mm;
+}
+
+.athlete-page-footer > span:last-child {
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 11pt;
+}
+
+
+/* =========================================================
+   PAGE 23 STATEMENT
+========================================================= */
+
+.athlete-page-statement {
+  display: grid;
+
+  grid-template-columns: 12mm 1fr;
+
+  align-items: center;
+
+  gap: 4mm;
+
+  margin-top: 4mm;
+
+  padding: 4mm 5mm;
+
+  background: var(--gray-50);
+
+  border-left: 1mm solid var(--gold);
+}
+
+.athlete-page-statement-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 10mm;
+  height: 10mm;
+
+  background: var(--navy);
+
+  color: var(--gold);
+}
+
+.athlete-page-statement span {
+  display: block;
+
+  margin-bottom: 1mm;
+
+  color: var(--blue);
+
+  font-size: 6.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.athlete-page-statement strong {
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 13pt;
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+
+  .athlete-spotlight-page {
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+
+    overflow: hidden;
+
+    break-after: page;
+    page-break-after: always;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .athlete-profile-card,
+  .athlete-page-header,
+  .athlete-spotlight-intro,
+  .athlete-continuation-intro,
+  .athlete-page-statement,
+  .athlete-closing-feature,
+  .athlete-page-footer {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .athlete-profile-photo {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+}
+
+/* =========================================================
+   PAGE 25 — VOICES OF TTU SPORT
+========================================================= */
+
+.voices-page {
+  width: 210mm;
+  height: 297mm;
+  min-height: 297mm;
+
+  padding: 15mm 17mm 12mm;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--white);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.voices-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 5mm;
+
+  border-bottom: 0.4mm solid var(--border);
+}
+
+.voices-header h2 {
+  margin-top: 5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 34pt;
+
+  line-height: 0.96;
+}
+
+.voices-header h2 em {
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+.voices-page-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16mm;
+  height: 16mm;
+
+  background: var(--navy);
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.voices-intro {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 10mm;
+
+  margin-top: 7mm;
+
+  align-items: end;
+}
+
+.voices-intro-heading > span {
+  color: var(--blue);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.voices-intro-heading h3 {
+  margin-top: 2.5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 22pt;
+
+  line-height: 1;
+}
+
+.voices-intro-heading h3 em {
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+.voices-intro-copy {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3mm;
+}
+
+.voices-intro-copy p {
+  color: var(--gray-600);
+
+  font-size: 9pt;
+
+  line-height: 12.5pt;
+}
+
+
+/* =========================================================
+   FEATURE QUOTE
+========================================================= */
+
+.voices-feature {
+  display: grid;
+
+  grid-template-columns: 14mm 1fr auto;
+
+  align-items: center;
+
+  gap: 5mm;
+
+  margin-top: 6mm;
+
+  padding: 5mm 6mm;
+
+  background: var(--navy);
+
+  color: var(--white);
+}
+
+.voices-feature-mark {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 11mm;
+  height: 11mm;
+
+  border:
+    0.35mm solid
+    rgba(242, 181, 68, 0.55);
+
+  color: var(--gold);
+}
+
+.voices-feature span {
+  display: block;
+
+  margin-bottom: 1.5mm;
+
+  color: var(--gold-light);
+
+  font-size: 6.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.voices-feature strong {
+  color: var(--white);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+
+  line-height: 1.05;
+}
+
+.voices-feature-icon {
+  color: var(--gold);
+}
+
+
+/* =========================================================
+   VOICES GRID
+========================================================= */
+
+.voices-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 4mm;
+
+  margin-top: 6mm;
+
+  flex: 1;
+
+  min-height: 0;
+}
+
+
+/* =========================================================
+   VOICE CARD
+========================================================= */
+
+.voice-card {
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 0;
+
+  overflow: hidden;
+
+  border:
+    0.4mm solid var(--border);
+
+  background: var(--white);
+
+  break-inside: avoid;
+
+  page-break-inside: avoid;
+}
+
+.voice-card-top {
+  display: grid;
+
+  grid-template-columns: 34mm 1fr;
+
+  min-height: 39mm;
+
+  background: var(--gray-50);
+}
+
+
+/* =========================================================
+   VOICE PHOTO
+========================================================= */
+
+.voice-card-photo {
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--navy);
+}
+
+.voice-card-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.voice-card-number {
+  position: absolute;
+
+  top: 2.5mm;
+  left: 2.5mm;
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 11pt;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   VOICE META
+========================================================= */
+
+.voice-card-meta {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 4mm;
+}
+
+.voice-card-meta > span {
+  display: block;
+
+  margin-bottom: 1.5mm;
+
+  color: var(--blue);
+
+  font-size: 6.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.voice-card-meta h3 {
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+
+  line-height: 1;
+}
+
+.voice-card-meta p {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1.5mm;
+
+  margin-top: 2mm;
+
+  color: var(--gray-500);
+
+  font-size: 6.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.07em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.voice-card-quote {
+  display: grid;
+
+  grid-template-columns: 8mm 1fr;
+
+  gap: 2mm;
+
+  flex: 1;
+
+  padding: 4mm 5mm;
+}
+
+.voice-card-quote svg {
+  color: var(--gold);
+}
+
+.voice-card-quote p {
+  color: var(--gray-700);
+
+  font-family: var(--font-display);
+
+  font-size: 10pt;
+
+  line-height: 13pt;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.voices-empty {
+  display: grid;
+
+  grid-template-columns: 14mm 1fr;
+
+  align-items: center;
+
+  gap: 5mm;
+
+  margin-top: 7mm;
+
+  min-height: 55mm;
+
+  padding: 6mm;
+
+  background: var(--gray-50);
+
+  border:
+    0.4mm solid var(--border);
+
+  border-left:
+    1mm solid var(--gold);
+}
+
+.voices-empty-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 12mm;
+  height: 12mm;
+
+  background: var(--navy);
+
+  color: var(--gold);
+}
+
+.voices-empty span {
+  display: block;
+
+  margin-bottom: 1.5mm;
+
+  color: var(--blue);
+
+  font-size: 7pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.voices-empty h3 {
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 20pt;
+
+  line-height: 1;
+}
+
+.voices-empty p {
+  max-width: 125mm;
+
+  margin-top: 2mm;
+
+  color: var(--gray-600);
+
+  font-size: 8.5pt;
+
+  line-height: 11.5pt;
+}
+
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.voices-closing {
+  margin-top: 5mm;
+}
+
+.voices-closing-line {
+  width: 100%;
+
+  height: 0.8mm;
+
+  background: var(--gold);
+}
+
+.voices-closing-content {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 10mm;
+
+  padding: 4mm 0;
+}
+
+.voices-closing-content > span {
+  color: var(--blue);
+
+  font-size: 7pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.voices-closing-content strong {
+  max-width: 105mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+
+  line-height: 1.05;
+
+  text-align: right;
+}
+
+.voices-closing-content em {
+  color: var(--blue);
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.voices-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 3mm;
+
+  padding-top: 3mm;
+
+  border-top:
+    0.4mm solid var(--border);
+
+  color: var(--gray-500);
+
+  font-size: 7.5pt;
+
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+}
+
+.voices-footer div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2mm;
+}
+
+.voices-footer > span:last-child {
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 11pt;
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+
+  .voices-page {
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+
+    overflow: hidden;
+
+    break-after: page;
+    page-break-after: always;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .voices-header,
+  .voices-intro,
+  .voices-feature,
+  .voices-grid,
+  .voice-card,
+  .voices-closing,
+  .voices-footer {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .voice-card-photo,
+  .voice-card-quote {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+}
+
+/* =========================================================
+   THE SUPPORT SYSTEM
+   PAGE 26
+========================================================= */
+
+.support-page {
+  width: 210mm;
+  height: 297mm;
+  min-height: 297mm;
+
+  padding: 15mm 17mm 12mm;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--white);
+
+  overflow: hidden;
+}
+
+/* ---------------------------------------------------------
+   HEADER
+--------------------------------------------------------- */
+
+.support-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 5mm;
+
+  border-bottom: 0.4mm solid var(--border);
+}
+
+.support-header h2 {
+  margin-top: 5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 34pt;
+  line-height: 0.96;
+}
+
+.support-header h2 em {
+  color: var(--blue);
+  font-style: italic;
+}
+
+.support-page-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16mm;
+  height: 16mm;
+
+  background: var(--navy);
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+  font-size: 15pt;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   INTRO
+--------------------------------------------------------- */
+
+.support-intro {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 10mm;
+
+  margin-top: 7mm;
+
+  align-items: end;
+}
+
+.support-intro-heading > span {
+  color: var(--blue);
+
+  font-size: 7.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.support-intro-heading h3 {
+  margin-top: 2.5mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 22pt;
+  line-height: 1;
+}
+
+.support-intro-heading h3 em {
+  color: var(--blue);
+  font-style: italic;
+}
+
+.support-intro-copy {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3mm;
+}
+
+.support-intro-copy p {
+  color: var(--gray-600);
+
+  font-size: 9pt;
+  line-height: 12.5pt;
+}
+
+/* ---------------------------------------------------------
+   FEATURE BANNER
+--------------------------------------------------------- */
+
+.support-feature {
+  display: grid;
+  grid-template-columns: 14mm 1fr auto;
+
+  align-items: center;
+
+  gap: 5mm;
+
+  margin-top: 6mm;
+
+  padding: 5mm 6mm;
+
+  background: var(--navy);
+
+  color: var(--white);
+}
+
+.support-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 11mm;
+  height: 11mm;
+
+  border: 0.35mm solid rgba(242, 181, 68, 0.55);
+
+  color: var(--gold);
+}
+
+.support-feature span {
+  display: block;
+
+  margin-bottom: 1.5mm;
+
+  color: var(--gold-light);
+
+  font-size: 6.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.support-feature strong {
+  color: var(--white);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+  line-height: 1.05;
+}
+
+.support-feature-mark {
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 24pt;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   SUPPORT GRID
+--------------------------------------------------------- */
+
+.support-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 4mm;
+
+  margin-top: 6mm;
+
+  flex: 1;
+
+  min-height: 0;
+}
+
+/* ---------------------------------------------------------
+   SUPPORT CARD
+--------------------------------------------------------- */
+
+.support-card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 0;
+
+  overflow: hidden;
+
+  background: var(--white);
+
+  border: 0.4mm solid var(--border);
+
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.support-card-image {
+  position: relative;
+
+  height: 39mm;
+
+  flex: 0 0 39mm;
+
+  overflow: hidden;
+
+  background: var(--navy);
+}
+
+.support-card-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.support-card-image-placeholder {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--gold);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--navy),
+      var(--navy-light)
+    );
+}
+
+.support-card-image img + .support-card-image-placeholder {
+  display: none;
+}
+
+.support-card-number {
+  position: absolute;
+
+  top: 2.5mm;
+  left: 2.5mm;
+
+  color: var(--gold-light);
+
+  font-family: var(--font-display);
+
+  font-size: 11pt;
+  font-weight: 700;
+}
+
+.support-card-content {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  min-height: 0;
+
+  padding: 4mm 4.5mm;
+}
+
+.support-card-content > span {
+  display: block;
+
+  margin-bottom: 1.5mm;
+
+  color: var(--blue);
+
+  font-size: 6.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.support-card-content h3 {
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 14pt;
+  line-height: 1.05;
+}
+
+.support-card-content p {
+  margin-top: 2mm;
+
+  color: var(--gray-600);
+
+  font-size: 7.5pt;
+  line-height: 10.5pt;
+}
+
+/* ---------------------------------------------------------
+   CLOSING
+--------------------------------------------------------- */
+
+.support-closing {
+  margin-top: 5mm;
+}
+
+.support-closing-line {
+  width: 100%;
+  height: 0.8mm;
+
+  background: var(--gold);
+}
+
+.support-closing-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 10mm;
+
+  padding: 4mm 0;
+}
+
+.support-closing-content > span {
+  color: var(--blue);
+
+  font-size: 7pt;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.support-closing-content strong {
+  max-width: 105mm;
+
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 15pt;
+  line-height: 1.05;
+
+  text-align: right;
+}
+
+.support-closing-content em {
+  color: var(--blue);
+  font-style: italic;
+}
+
+/* ---------------------------------------------------------
+   FOOTER
+--------------------------------------------------------- */
+
+.support-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 3mm;
+
+  padding-top: 3mm;
+
+  border-top: 0.4mm solid var(--border);
+
+  color: var(--gray-500);
+
+  font-size: 7.5pt;
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+}
+
+.support-footer div {
+  display: flex;
+  align-items: center;
+
+  gap: 2mm;
+}
+
+.support-footer > span:last-child {
+  color: var(--navy);
+
+  font-family: var(--font-display);
+
+  font-size: 11pt;
+}
+
+/* ---------------------------------------------------------
+   PRINT
+--------------------------------------------------------- */
+
+@media print {
+  .support-page {
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+
+    overflow: hidden;
+
+    break-after: page;
+    page-break-after: always;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .support-header,
+  .support-intro,
+  .support-feature,
+  .support-grid,
+  .support-closing,
+  .support-footer {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .support-card,
+  .support-card-image,
+  .support-card-content {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
