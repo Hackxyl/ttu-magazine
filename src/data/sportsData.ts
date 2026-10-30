@@ -141,7 +141,7 @@ export const sportsData: SportData[] = [
         id: "ladies-volleyball",
         name: "Ladies Volleyball",
         category: "LADIES",
-        squadPhoto: "/images/teams/ladies volleyball.jpeg",
+        squadPhoto: "/images/teams/taitans volleball ladies.jpeg",
 
         captain: {
           name: "",
@@ -319,7 +319,7 @@ export const sportsData: SportData[] = [
         id: "ladies-netball",
         name: "Ladies Netball",
         category: "LADIES",
-        squadPhoto: "/images/teams/ladies-netball.jpg",
+        squadPhoto: "/public/images/teams/netball ladies.jpeg",
 
         captain: {
           name: "",
